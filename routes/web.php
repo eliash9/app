@@ -21,4 +21,4 @@ Route::get('/', function () {
 */
 Route::get('/generate-pdf', [PDFController::class, 'generatePDF']);
 
-Route::get('/select-template', [FormController::class, 'showForm'])->name('select-template');
+Route::get('/', [FormController::class, 'showForm'])->name('select-template');

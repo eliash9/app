@@ -83,9 +83,13 @@ class PDFController extends Controller
 
         // Read the content of the file
         $fileContent = file_get_contents($filePath);
+        $data = [
+            // Your data goes here
+            'title' => 'judul',
+        ];
 
         // Generate PDF using the file content
-        $pdf = PDF::loadView('pdf_view', ['content' => $fileContent]);
+        $pdf = PDF::loadView('pdf_view', ['content' => $fileContent,'data'=>$data]);
 
         return $pdf->stream();
     }
