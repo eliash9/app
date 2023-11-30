@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ringkasan Pasien Masuk dan Keluar</title>
-    <!---
+    
     @if (stripos(\Request::url(), 'localhost') !== false)
         {{-- <link rel="stylesheet" href="{{ asset('css/report/paper.css') }}">
         <link rel="stylesheet" href="{{ asset('css/report/table.css') }}">
@@ -40,7 +40,7 @@
         <script type="text/javascript" src="{{ asset('service/js/angular/angular-aria.min.js') }}"></script>
         <script src="{{ asset('service/js/angular/angular-material.js') }}" type="text/javascript"></script>
     @endif
-   --->
+   
     <style>
         * {
             padding: 0;
@@ -135,6 +135,7 @@
                     </table>
 
                 </td>
+                
                 <td style="width:25%;margin:0;" rowspan="2">
                     <table width="100%" style="border:none;table-layout:fixed;text-align:left;">
                         <tr>
@@ -180,53 +181,53 @@
                     <table style="border:none;">
                         <tr style="border:none;">
                             <td style="border:none; width: 20%;">Nama Lengkap</td>
-                            <td style="border:none;">: @{{ item.obj[420303] ? item.obj[420303] :
+                            <td style="border:none; ">: @{{ item.obj[420303] ? item.obj[420303] :
                                 '_________________________________________________' }}</td>
-                            <td style="border:none;">{!!
+                            <td style="border:none; ">{!!
                                 $res['d'][0]->jeniskelamin == 'PEREMPUAN' ? 'P' : 'L' !!}</td>
 
                         </tr>
                         <tr>
-                            <td style="border:none;">Tgl Lahir</td>
-                            <td style="border:none;">: @{{ item.obj[420307] ? item.obj[420307] :
+                            <td style="border:none;" >Tgl Lahir</td>
+                            <td style="border:none;" colspan="2">: @{{ item.obj[420307] ? item.obj[420307] :
                                 '_________________________________________________' }}</td>
 
                         </tr>
                         <tr>
-                            <td style="border:none;">Agama</td>
-                            <td style="text-align:left;border:none;">: @{{ item.obj[420308] ? item.obj[420308] :
+                            <td style="border:none;" >Agama</td>
+                            <td style="text-align:left;border:none;" colspan="2">: @{{ item.obj[420308] ? item.obj[420308] :
                                 '_________________________________________________' }}</td>
 
                         </tr>
                         <tr>
                             <td style="border:none;">Kebangsaan</td>
-                            <td style="text-align:left;border:none;">: @{{ item.obj[420309] ?
+                            <td style="text-align:left;border:none;" colspan="2">: @{{ item.obj[420309] ?
                                 item.obj[420309] :
                                 '_________________________________________________' }}</td>
                         </tr>
                         <tr>
                             <td style="border:none;">Alamat</td>
-                            <td style="text-align:left;border:none;">: @{{ item.obj[420310] ?
+                            <td style="text-align:left;border:none;" colspan="2">: @{{ item.obj[420310] ?
                                 item.obj[420310] :
                                 '_________________________________________________' }}</td>
                         </tr>
                         <tr>
                             <td style="border:none;">Nomor Tlpn/HP</td>
-                            <td style="text-align:left;border:none;">: @{{ item.obj[420311] ? item.obj[420311] :
+                            <td style="text-align:left;border:none;" colspan="2">: @{{ item.obj[420311] ? item.obj[420311] :
                                 '_________________________________________________' }}</td>
                         </tr>
                     </table>
 
 
                 </td>
-                <td valign="top">No. RM : @{{ item.obj[420304] ? item.obj[420304] : '' }}</td>
+                <td valign="top" height="5px" >No. RM : @{{ item.obj[420304] ? item.obj[420304] : '' }}</td>
 
             </tr>
             <tr>
-                <td valign="top">
+                <td valign="top" >
                     <table style="border:none;">
                         <tr>
-                            <td style="border:none;">Status Perkawinan</td>
+                            <td style="border:none;"  >Status Perkawinan</td>
                         </tr>
                         <tr>
                             <td style="border:none;">@{{ item.obj[420312] ? '[&#10004;]' : '[&nbsp;&nbsp;&nbsp;]' }}
