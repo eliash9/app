@@ -76,20 +76,17 @@ class PDFController extends Controller
 */
     public function generatePdf(Request $request)
     {
-        $selectedFile = $request->input('file');
-
-        // You may need to adjust the path based on your folder structure
-        $filePath = public_path("files/{$selectedFile}");
-
-        // Read the content of the file
-        $fileContent = file_get_contents($filePath);
+        $selectedFile = $request->input('file');     
+        $fileName = pathinfo($selectedFile, PATHINFO_FILENAME);
         $data = [
-            // Your data goes here
+          
             'title' => 'judul',
+            'namars'=>'RSUD H.A. Sulthan Daeng Radja Bulukumba',
+            'res'=>''
         ];
 
         // Generate PDF using the file content
-        $pdf = PDF::loadView('pdf_view', ['content' => $fileContent,'data'=>$data]);
+        $pdf = PDF::loadView('pdf.'.$fileName,$data);
 
         return $pdf->stream();
     }

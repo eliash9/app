@@ -8,6 +8,7 @@
     <title>PDF Template 1</title>
 </head>
 <body>
+<h1>{{ $title }}</h1>
     <h1>Hello, this is PDF Template 1!</h1>
     <!-- Your template content goes here -->
 </body>

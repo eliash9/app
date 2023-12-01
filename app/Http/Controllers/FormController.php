@@ -2,17 +2,20 @@
 // app/Http/Controllers/FormController.php
 
 namespace App\Http\Controllers;
-
+use Illuminate\Support\Facades\File;
 class FormController extends Controller
 {
     public function showForm()
     {
-       // return view('select_template');
-       $folderPath = public_path('files'); // Change the path to your folder
-       $files = scandir($folderPath);
-       $files = array_diff($files, array('.', '..'));
 
-       return view('select_template', ['files' => $files]);
+        $viewsPath = base_path('resources/views/pdf');
+        $files = File::files($viewsPath);
+
+        $viewFiles = [];
+        foreach ($files as $file) {
+            $viewFiles[] = pathinfo($file, PATHINFO_FILENAME);
+        }
+        return view('select_template', ['files' => $viewFiles]);
 
     }
 }

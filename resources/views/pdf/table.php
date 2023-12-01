@@ -50,8 +50,9 @@ p {
     font-weight: normal;
     text-align: left;
     padding: 0.25rem 0;
-    border-top: 1px solid black;
+    border: 1px solid black;
     white-space: nowrap;
+    border-collapse: collapse;
   }
   td {
     &:last-child {
@@ -90,8 +91,8 @@ p {
   th,
   td {
     border: 0;
-    padding: 0;
-  }
+    border-collapse: collapse;
+  },
 }
 
 .performance-facts__table--grid {
@@ -119,11 +120,37 @@ p {
   border-bottom: 1px solid black;
 }
 
+table, th, td {
+  border: 1px solid black;
+  border-collapse: collapse;
+}
+
 
     </style>
 </head>
 <body>
 
+<table >
+  <tr>
+    <td>
+      asfasfa
+    </td>
+    <td>
+      asfasfa<br>
+      asfasfafsa
+      asfasfaasfa
+      fs
+      asfasfaasfa
+      sfasf
+      asfasfaasfa
+      asfasfa
+
+    </td>
+    <td>
+      asfasfa
+    </td>
+  </tr>
+</table>
 
 <section class="performance-facts">
   <header class="performance-facts__header">

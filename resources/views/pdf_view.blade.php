@@ -7,6 +7,7 @@
     <title>PDF View</title>
 </head>
 <body>
-    {!! $content !!}
+{{ $title }}
+  
 </body>
 </html>
