@@ -2,7 +2,8 @@
 <html lang="en" ng-app="angularApp">
 
 <head>
-    <meta charset="UTF-8">
+
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Asesmen Awal Keperawatan IGD</title>
@@ -31,33 +32,17 @@
             transform: scale(72%);
         }
 
-        table {
-            border: 1px solid #000;
-            border-collapse: collapse;
 
-        }
-
-        table tr td {
+        table,
+        td {
             border: 1px solid #000;
             border-collapse: collapse;
             padding: .3rem;
-        }
-
-        tr,
-        td {
-            page-break-inside: avoid;
-        }
-
-        .avoid-break {
             page-break-before: avoid;
-            page-break-after: avoid;
+
         }
 
 
-
-        td input {
-            vertical-align: middle;
-        }
 
         .format {
             padding: 1rem;
@@ -225,12 +210,225 @@
                 <td valign="middle" colspan="4">Keluhan Saat ini</td>
                 <td colspan="18">@{{ item.obj[420864] ? item.obj[420864] : '' }}</td>
             </tr>
-            </table>
+        </table>
 
-<table width="100%" style="table-layout:fixed;">
+        <table width="100%" style="table-layout:fixed;border-top:none;">
+            <tr>
+                <td rowspan="2" valign="top" width="18%">Status Fisik</td>
+                <td colspan="3" width="27%">
+
+                    <table style="border:none">
+                        <tr height="18px">
+
+                            <td colspan="2" style="border:none;">Airway</td>
+                            <td style="border:none;">:</td>
+                            <td colspan="2" valign="middle" style="border:none;">@{{ item.obj[420635] ? '[&#10004;]' :
+                                '[&nbsp;&nbsp;&nbsp;]' }} Normal</td>
+                            <td colspan="2" style="border:none;">@{{ item.obj[420636] ? '[&#10004;]' :
+                                '[&nbsp;&nbsp;&nbsp;]' }}
+                                Masalah</td>
+                            <td colspan="11" style="border:none;">: @{{ item.obj[420637] ? item.obj[420637] : '' }}</td>
+                        </tr>
+                        <tr height="18px">
+                            <td colspan="2" style="border:none;">Breathing</td>
+                            <td colspan="2" style="border:none;">: Nafas</td>
+                            <td colspan="2" style="border:none;">: @{{ item.obj[420638] ? item.obj[420638] : '' }} x/m
+                            </td>
+                            <td style="border:none;"></td>
+                            <td colspan="4" style="border:none;">Pola pernafasan </td>
+                            <td colspan="2" style="border:none;">@{{ item.obj[420639] ? '[&#10004;]' :
+                                '[&nbsp;&nbsp;&nbsp;]' }}
+                                Normal</td>
+                            <td colspan="2" style="border:none;">@{{ item.obj[420640] ? '[&#10004;]' :
+                                '[&nbsp;&nbsp;&nbsp;]' }}
+                                Tidak, </td>
+                            <td colspan="3" style="border:none;">Jelaskan: @{{ item.obj[420641] ? item.obj[420641] : ''
+                                }}</td>
+                        </tr>
+                        <tr height="18px">
+                            <td colspan="2" style="border:none;">Circulation</td>
+                            <td colspan="2" style="border:none;">TD</td>
+                            <td colspan="2" style="border:none;">: @{{ item.obj[420642] ? item.obj[420642] : '' }} mmHg
+                            </td>
+                            <td style="border:none;"></td>
+                            <td style="border:none;" colspan="">Nadi</td>
+                            <td style="border:none;" colspan="3"> @{{ item.obj[420643] ? item.obj[420643] : '' }} x/m
+                            </td>
+                            <td style="border:none;" colspan="2">@{{ item.obj[420644] ? '[&#10004;]' :
+                                '[&nbsp;&nbsp;&nbsp;]' }}
+                                Teratur</td>
+                            <td style="border:none;" colspan="5">@{{ item.obj[420645] ? '[&#10004;]' :
+                                '[&nbsp;&nbsp;&nbsp;]' }}
+                                Tidak Teratur </td>
+                        </tr>
+                        <tr height="18px">
+                            <td style="border:none;" colspan="2">Suhu</td>
+                            <td style="border:none;" colspan="4">: @{{ item.obj[420646] ? item.obj[420646] : '' }} °C
+                            </td>
+                            <td style="border:none;"></td>
+                            <td style="border:none;" colspan="">Akral</td>
+                            <td style="border:none;" colspan="3">@{{ item.obj[420647] ? '[&#10004;]' :
+                                '[&nbsp;&nbsp;&nbsp;]' }}
+                                Hangat</td>
+                            <td style="border:none;" colspan="7">@{{ item.obj[420648] ? '[&#10004;]' :
+                                '[&nbsp;&nbsp;&nbsp;]' }}
+                                Dingin</td>
+                        </tr>
+                        <tr height="18px">
+                            <td style="border:none;" colspan="6">Pendarahan/Kehilangan Cairan :</td>
+                            <td style="border:none;"></td>
+                            <td style="border:none;" colspan=""></td>
+                            <td style="border:none;" colspan="4">@{{ item.obj[420649] ? '[&#10004;]' :
+                                '[&nbsp;&nbsp;&nbsp;]' }}
+                                Tidak</td>
+                            <td style="border:none;" colspan="6">@{{ item.obj[420650] ? '[&#10004;]' :
+                                '[&nbsp;&nbsp;&nbsp;]' }}
+                                Ada, Jelaskan : @{{ item.obj[420641] ? item.obj[420651] : '' }}</td>
+                        </tr>
+                        <tr height="18px">
+                            <td style="border:none;" colspan="2">Capilary Refill :</td>
+                            <td style="border:none;" colspan="5">@{{ item.obj[420652] ? item.obj[420652] : '___' }}
+                                Detik</td>
+                            <td style="border:none;" colspan="5"></td>
+                            <td style="border:none;" colspan="5">SPO2, Jelaskan : @{{ item.obj[420653] ?
+                                item.obj[420653] : '___' }}
+                                %</td>
+                            <td style="border:none;"></td>
+                        </tr>
+                    </table>
+
+                </td>
+            </tr>
+            <tr>
+                <td>
+
+                    <table style="border:none">
+                        <tr>
+                            <td style="border:none;" colspan="2">
+                                <b>Dissability/Neurologi</b>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="border:none;" colspan="2">Kesadaran : @{{ item.obj[420654] ?
+                                item.obj[420654] : '' }}
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="border:none;" colspan="2">GCS : E : @{{ item.obj[420655] ?
+                                item.obj[420655] : '' }}, V : @{{ item.obj[420656] ? item.obj[420656] : '' }}, M : @{{
+                                item.obj[420657] ? item.obj[420657] : '' }}</td>
+                        </tr>
+                        <tr>
+                            <td style="border:none;">@{{ item.obj[420658] ? '[&#10004;]' :
+                                '[&nbsp;&nbsp;&nbsp;]' }}
+                                Mandiri</td>
+                            <td style="border:none;">@{{ item.obj[420659] ?
+                                '[&#10004;]' :
+                                '[&nbsp;&nbsp;&nbsp;]' }} Dibantu</td>
+                        </tr>
+                        <tr>
+                            <td style="border:none;">@{{ item.obj[420660] ? '[&#10004;]' : '[&nbsp;&nbsp;&nbsp;]' }}
+                                Alert</td>
+                            <td style="border:none;">@{{ item.obj[420661] ? '[&#10004;]' :
+                                '[&nbsp;&nbsp;&nbsp;]' }} Pain</td>
+                        </tr>
+                        <tr>
+                            <td style="border:none;">@{{ item.obj[420662] ? '[&#10004;]' : '[&nbsp;&nbsp;&nbsp;]' }}
+                                Verbal</td>
+                            <td style="border:none;">@{{ item.obj[420663] ? '[&#10004;]' :
+                                '[&nbsp;&nbsp;&nbsp;]' }} Non Verbal</td>
+                        </tr>
+                        <tr>
+                            <td style="border:none;" colspan="2">
+                                <b>Pupil</b>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="border:none">@{{ item.obj[420664] ? '[&#10004;]' : '[&nbsp;&nbsp;&nbsp;]' }}
+                                Isokor</td>
+                            <td style="border:none">@{{ item.obj[420665] ? '[&#10004;]' : '[&nbsp;&nbsp;&nbsp;]' }}
+                                Anisokor</td>
+
+                        </tr>
+                        <tr>
+                            <td style="border:none;">@{{ item.obj[420666] ? '[&#10004;]' :
+                                '[&nbsp;&nbsp;&nbsp;]' }} Midriasis</td>
+                        </tr>
+                        <tr>
+                            <td style="border:none;">Refleks: @{{ item.obj[420667] ?
+                                item.obj[420667] : '' }} / @{{ item.obj[420668] ? item.obj[420668] : '' }}</td>
+                        </tr>
 
 
-            <tr height="18px">
+                    </table>
+
+
+                </td>
+                <td>
+                    <table style="border:none">
+                        <tr>
+                            <td style="border:none;" colspan="2">
+                                Eksposure
+
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="border:none;">@{{ item.obj[420669] ? '[&#10004;]' : '[&nbsp;&nbsp;&nbsp;]' }}
+                                Jelas</td>
+                            <td style="border:none;">@{{ item.obj[420670] ? '[&#10004;]' :
+                                '[&nbsp;&nbsp;&nbsp;]' }} Pendarahan</td>
+                        </tr>
+                        <tr>
+                            <td style="border:none;">@{{ item.obj[420671] ? '[&#10004;]' : '[&nbsp;&nbsp;&nbsp;]' }}
+                                Fraktur</td>
+                            <td style="border:none;">@{{ item.obj[420672] ? '[&#10004;]' :
+                                '[&nbsp;&nbsp;&nbsp;]' }} Normal</td>
+                        </tr>
+                        <tr>
+                            <td style="border:none;">@{{ item.obj[420673] ? '[&#10004;]' : '[&nbsp;&nbsp;&nbsp;]' }}
+                                Hematom</td>
+                            <td style="border:none;">@{{ item.obj[420674] ? '[&#10004;]' :
+                                '[&nbsp;&nbsp;&nbsp;]' }} Deformitas</td>
+                        </tr>
+                        <tr>
+                            <td style="border:none;">@{{ item.obj[420675] ? '[&#10004;]' :
+                                '[&nbsp;&nbsp;&nbsp;]' }} Luka</td>
+                        </tr>
+                    </table>
+                </td>
+                <td>
+                    <table style="border:none">
+                        <tr>
+                            <td style="border:none;">
+                                Tanda kehidupan
+
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="border:none;">@{{ item.obj[420676] ? '[&#10004;]' : '[&nbsp;&nbsp;&nbsp;]' }}
+                                Denyut Nadi (-)</td>
+                        </tr>
+                        <tr>
+                            <td style="border:none;">@{{ item.obj[420677] ? '[&#10004;]' : '[&nbsp;&nbsp;&nbsp;]' }}
+                                Reflek Cahaya (-)</td>
+                        </tr>
+                        <tr>
+                        <td style="border:none;" colspan="6">@{{ item.obj[420678] ? '[&#10004;]' : '[&nbsp;&nbsp;&nbsp;]' }} EKG
+                    Asystole</td>
+                        </tr>
+                        <tr>
+                        <td c style="border:none;">Penentuan Kematian Pukul: @{{item.obj[420679] | toDate |
+                    date:'HH:mm'}} WITA</td>
+                        </tr>
+                    </table>
+
+                </td>
+            </tr>
+        </table>
+        <table width="100%" style="table-layout:fixed;">
+
+
+            <!--tr height="18px">
                 <td rowspan="25" colspan="4" valign="top">Status Fisik</td>
                 <td colspan="2" style="border:none;">Airway</td>
                 <td style="border:none;">:</td>
@@ -373,8 +571,8 @@
                     item.obj[420667] : '' }} / @{{ item.obj[420668] ? item.obj[420668] : '' }}</td>
                 <td colspan="6" style="border:none;border-right:1px solid #000"></td>
                 <td colspan="6" style="border:none;border-right:1px solid #000"></td>
-            </tr>
-       
+            </tr-->
+
 
             <tr height="18px" style="border-top: 1px solid #000;">
                 <td colspan="4" rowspan="7" style="border:none;border-right:1px solid #000">Bio-Psiko-Sosio-Spiritual
@@ -961,11 +1159,8 @@
             if (items != null) {
                 return new Date(items);
             }
-        };
-    });
-    $(document).ready(function () {
-        window.print();
-    });
-</script>
+        };;
+        $(document).ready(function () {
+           .pri</script>
 
 </html>
