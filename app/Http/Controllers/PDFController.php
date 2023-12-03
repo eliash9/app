@@ -78,12 +78,26 @@ class PDFController extends Controller
     {
         $selectedFile = $request->input('file');     
         $fileName = pathinfo($selectedFile, PATHINFO_FILENAME);
+
+        $profile=[
+            'namalengkap'=>'RS',
+            'alamatlengkap'=>'alamat'
+        ];
+
+
+        $res = [
+            'profile' => [
+                'namalengkap' => 'RSUD H.A SULTHAN DAENG RADJA BULUKUMBA',
+                'alamatlengkap' =>'Jl. Serikaya No.17, Caile, Kec. Ujung Bulu, Kabupaten Bulukumba, Sulawesi Selatan 92517'
+            ]
+        ];
         $data = [
           
             'title' => 'judul',
             'namars'=>'RSUD H.A. Sulthan Daeng Radja Bulukumba',
-            'res'=>''
+            'res'=>$res
         ];
+        
 
         // Generate PDF using the file content
         $pdf = PDF::loadView('pdf.'.$fileName,$data);
