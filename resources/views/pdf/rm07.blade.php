@@ -146,7 +146,7 @@
                     @endif
                 </td>
                 <td rowspan="4" colspan="7" style="text-align:center;font-size:10px;">
-                    <strong>{!! $res['profile']['namalengkap'] !!}</strong> <br>{!! $res['profile']['alamatlengkap']
+                    <strong>{!! $res['profile']->namalengkap !!}</strong> <br>{!! $res['profile']->alamatlengkap
                     !!}<br>TELP :
                     (0413) 81292
                 </td>
