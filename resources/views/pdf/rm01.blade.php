@@ -6,8 +6,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ringkasan Pasien Masuk dan Keluar</title>
-    
-   
+
+
     <style>
         * {
             padding: 0;
@@ -81,45 +81,45 @@
             <tr>
                 <td style="width:15%;margin:0 auto;" rowspan="2">
                     <figure style="width:60px;margin:0 auto;">
-                        
+
                         @if(stripos(\Request::url(), 'localhost') !== FALSE)
-                                <img src="{{ asset('img/logo_only.png') }}" alt="" style="width: 60px;">
-                            @else
-    
+                        <img src="{{ asset('img/logo_only.png') }}" alt="" style="width: 60px;">
+                        @else
+
                         <img src="service/img/logo_only.png" alt="" style="width: 60px;">
-                             @endif 
+                        @endif
                     </figure>
                 </td>
                 <td style="width:35%;margin:0 auto;" rowspan="2">
                     <table width="100%" style="border:none;table-layout:fixed;text-align:center;">
                         <tr style="border:none;text-align:center;">
                             <td style="text-align:center;border:none;">
-                                <strong style="font-size: 11pt">@{!! $res['profile']->namalengkap !!}</strong> <br>
+                                <strong style="font-size: 11pt">{!! $res['profile']->namalengkap !!}</strong> <br>
                                 JL. SERIKAYA NO. 17 BULUKUMBA 92512 <br>
-                                TELP : @{!! $res['profile']->fixedphone !!}
+                                TELP : {!! $res['profile']->fixedphone !!}
                             </td>
                         </tr>
                     </table>
 
                 </td>
-                
+
                 <td style="width:25%;margin:0;" rowspan="2">
                     <table width="100%" style="border:none;table-layout:fixed;text-align:left;">
                         <tr>
                             <td colspan="4" style="border:none;font-size:7pt;">Nama Lengkap</td>
-                            <td style="border:none;font-size:7pt;" colspan="9">: @{!! $res['d'][0]->namapasien !!} (@{!!
+                            <td style="border:none;font-size:7pt;" colspan="9">: {!! $res['d'][0]->namapasien !!} ({!!
                                 $res['d'][0]->jeniskelamin == 'PEREMPUAN' ? 'P' : 'L' !!})</td>
-                          
+
                         </tr>
                         <tr>
                             <td colspan="4" style="border:none;font-size:7pt;">Tanggal Lahir</td>
-                            <td style="border:none;font-size:7pt;" colspan="9">: @{!! date('d-m-Y',strtotime(
+                            <td style="border:none;font-size:7pt;" colspan="9">: {!! date('d-m-Y',strtotime(
                                 $res['d'][0]->tgllahir
                                 )) !!}</td>
                         </tr>
                         <tr>
                             <td colspan="4" style="border:none;font-size:7pt;">NIK</td>
-                            <td style="border:none;font-size:7pt;" colspan="9">: @{!! $res['d'][0]->noidentitas !!}</td>
+                            <td style="border:none;font-size:7pt;" colspan="9">: {!! $res['d'][0]->noidentitas !!}</td>
 
                         </tr>
                     </table>
@@ -154,14 +154,15 @@
 
                         </tr>
                         <tr>
-                            <td style="border:none;" >Tgl Lahir</td>
+                            <td style="border:none;">Tgl Lahir</td>
                             <td style="border:none;" colspan="2">: @{{ item.obj[420307] ? item.obj[420307] :
                                 '_________________________________________________' }}</td>
 
                         </tr>
                         <tr>
-                            <td style="border:none;" >Agama</td>
-                            <td style="text-align:left;border:none;" colspan="2">: @{{ item.obj[420308] ? item.obj[420308] :
+                            <td style="border:none;">Agama</td>
+                            <td style="text-align:left;border:none;" colspan="2">: @{{ item.obj[420308] ?
+                                item.obj[420308] :
                                 '_________________________________________________' }}</td>
 
                         </tr>
@@ -179,21 +180,22 @@
                         </tr>
                         <tr>
                             <td style="border:none;">Nomor Tlpn/HP</td>
-                            <td style="text-align:left;border:none;" colspan="2">: @{{ item.obj[420311] ? item.obj[420311] :
+                            <td style="text-align:left;border:none;" colspan="2">: @{{ item.obj[420311] ?
+                                item.obj[420311] :
                                 '_________________________________________________' }}</td>
                         </tr>
                     </table>
 
 
                 </td>
-                <td valign="top" height="5px" >No. RM : @{{ item.obj[420304] ? item.obj[420304] : '' }}</td>
+                <td valign="top" height="5px">No. RM : @{{ item.obj[420304] ? item.obj[420304] : '' }}</td>
 
             </tr>
             <tr>
-                <td valign="top" >
+                <td valign="top">
                     <table style="border:none;">
                         <tr>
-                            <td style="border:none;"  >Status Perkawinan</td>
+                            <td style="border:none;">Status Perkawinan</td>
                         </tr>
                         <tr>
                             <td style="border:none;">@{{ item.obj[420312] ? '[&#10004;]' : '[&nbsp;&nbsp;&nbsp;]' }}
@@ -441,10 +443,11 @@
                 </td>
             </tr>
         </table>
-        
+
         <table width="100%" style="table-layout:fixed;border-top:none;border-bottom:none;">
             <tr>
-                <td style="border:none;border-right:1px solid #000" width="50%">Transfusi Darah : @{{ item.obj[420378] ? item.obj[420378] : '' }}</td>
+                <td style="border:none;border-right:1px solid #000" width="50%">Transfusi Darah : @{{ item.obj[420378] ?
+                    item.obj[420378] : '' }}</td>
                 <td style="border:none;">Golongan Darah : @{{ item.obj[420379] ? item.obj[420379] : '' }}</td>
             </tr>
         </table>
@@ -483,33 +486,33 @@
 
         </table>
 
-       
-        
+
+
         <table width="100%" style="table-layout:fixed;">
             <tr style="border:none;border-top:1px solid #000;height:25px">
-                <td style="border:none;border-right:1px solid #000;widt:50%;" >Keluar Tanggal : @{{item.obj[420391] |
+                <td style="border:none;border-right:1px solid #000;widt:50%;">Keluar Tanggal : @{{item.obj[420391] |
                     toDate | date:'dd MMMM yyyy'}}</td>
                 <td style="border:none" colspan="">Dokter Penanggung Jawab Pelayanan : @{{ item.obj[420393] ?
                     item.obj[420393] : '' }}</td>
             </tr>
             <tr style="border:none;height:25px">
-                <td style="border:none;border-right:1px solid #000" >Jam : @{{item.obj[420391] | toDate |
+                <td style="border:none;border-right:1px solid #000">Jam : @{{item.obj[420391] | toDate |
                     date:'HH:mm'}}</td>
                 <td style="border:none" colspan="" rowspan="2">
                     <div id="qrcodeDPJP" style="text-align: center"></div>
                 </td>
             </tr>
             <tr style="border:none;height:25px">
-                <td style="border:none;border-right:1px solid #000" >Lama Dirawat : @{{ item.obj[420392] ?
+                <td style="border:none;border-right:1px solid #000">Lama Dirawat : @{{ item.obj[420392] ?
                     item.obj[420392] : '' }}</td>
             </tr>
 
         </table>
 
-       
 
 
-     
+
+
     </div>
 </body>
 <script type="text/javascript">

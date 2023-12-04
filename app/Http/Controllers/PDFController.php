@@ -86,7 +86,8 @@ class PDFController extends Controller
 
         $profile = [
             'namalengkap' => 'RSUD H.A SULTHAN DAENG RADJA BULUKUMBA',
-            'alamatlengkap' => 'Jl. Serikaya No.17, Caile, Kec. Ujung Bulu, Kabupaten Bulukumba, Sulawesi Selatan 92517'
+            'alamatlengkap' => 'JL. SERIKAYA NO. 17 BULUKUMBA 92512',
+            'fixedphone'=>'363463'
 
         ];
         $d1=[

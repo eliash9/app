@@ -8,6 +8,42 @@
   <title>Ringkasan Pulang</title>
 
   <style>
+    * {
+      padding: 0;
+      margin: 0;
+      box-sizing: border-box;
+      font-family: DejaVu Sans, Verdana, Arial, sans-serif;
+    }
+
+    body,
+    html {
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 6pt;
+      margin: 10px 20px;
+    }
+
+    table {
+      border: 1px solid #000;
+      border-collapse: collapse;
+    }
+
+    table tr td {
+      border: 1px solid #000;
+      border-collapse: collapse;
+      padding: .3rem;
+    }
+
+    .table-noborder,
+    tr,
+    td {
+      border: 0;
+      border-collapse: collapse;
+      padding: .3rem;
+
+
+    }
+
+    /*
     @media print {
       td.merah {
         background-color: #d54242 !important;
@@ -34,9 +70,7 @@
       size: A4;
     }
 
-    /*@media print {*/
-    /*    body {margin:0}*/
-    /*}*/
+    
     .double-border {
 
       border: 4px solid #000;
@@ -51,7 +85,7 @@
 
     .box {
       border: 2px solid black;
-      /*border-radius: 6px;*/
+      
     }
 
     .garis6 td {
@@ -130,7 +164,7 @@
     .border-lr th {
       border: thin solid #000;
     }
-
+*/
     .border-doang {
       border-collapse: collapse;
       border: thin solid #000;
@@ -152,69 +186,90 @@
 </head>
 
 <body>
-  
-    <table width="100%" cellspacing="0" cellpadding="0" border="1">
-      <tr>
-        <td rowspan="4" colspan="3">
+
+  <table width="100%" style="table-layout:fixed;text-align:center;">
+    <tr>
+      <td style="width:15%;margin:0 auto;" rowspan="2">
+        <figure style="width:60px;margin:0 auto;">
+
           @if(stripos(\Request::url(), 'localhost') !== FALSE)
-          <img src="{{ asset('img/logo_only.png') }}" alt="" style="width: 60px;display:block; margin:auto;">
+          <img src="{{ asset('img/logo_only.png') }}" alt="" style="width: 60px;">
           @else
 
-          <img src="service/img/logo_only.png" alt="" style="width: 60px;display:block;">
+          <img src="service/img/logo_only.png" alt="" style="width: 60px;">
           @endif
-        </td>
-        <td rowspan="4" colspan="7" style="text-align:center;font-size:10px;">
-          <strong>{!! $res['profile']->namalengkap !!}</strong> <br>{!! $res['profile']->alamatlengkap
-          !!}<br>TELP :
-          (0413) 81292
-        </td>
-        <td colspan="2" class="border-left">No. RM </td>
-        <td colspan="8">: {!! $res['d'][0]->nocm !!}</td>
-        <td rowspan="2" colspan="2" style="font-size:xx-large;text-align: center;" class="bg-dark">RM</td>
-      </tr>
-      <tr height="20px">
-        <td colspan="2" class="border-left">Nama Lengkap</td>
-        <td colspan="8">: {!! $res['d'][0]->namapasien !!} {!! $res['d'][0]->jeniskelamin
-          ==
-          'PEREMPUAN' ? '(P)' : '(L)' !!}</td>
-      </tr>
-      <tr height="20px">
-        <td colspan="2" class="border-left">Tanggal Lahir</td>
-        <td colspan="8">: {!! date('d-m-Y',strtotime( $res['d'][0]->tgllahir )) !!}</td>
-        <td rowspan="2" colspan="2" style="font-size:xx-large;text-align: center;" class="border-left">07</td>
-      </tr>
-      <tr height="20px">
-        <td colspan='2' class="border-left">NIK</td>
-        <td colspan="8">: {!! $res['d'][0]->noidentitas !!}</td>
-      </tr>
-    </table>
-    <section>
-    <table width="100%" class="table-border">
-      <tr>
-        <td colspan="4" style="text-align: center;font-size: 16px;padding: 5px" class="background-gray">
-          <b>RINGKASAN PULANG</b>
-        </td>
-      </tr>
-      <tr>
-        <td colspan="4">
-          <div>
-            <table>
-              <tr>
-                <td style="border-right: 1px solid #000;padding-left: 5px">
-                  <span class="f-s-15">Ruang/bagian </span><span> : </span><span> @{{ item.obj[423800] }}</span>
-                </td>
-                <td style="border-right: 1px solid #000;padding-left: 5px">
-                  <span class="f-s-15">Tanggal Masuk </span><span> : </span><span> @{{ item.obj[423801] }}</span>
-                </td>
-                <td style="padding-left: 5px">
-                  <span class="f-s-15">Tanggal Keluar </span><span> : </span><span> @{{ item.obj[423802] }}</span>
-                </td>
-              </tr>
-            </table>
-          </div>
-        </td>
-      </tr>
-    </table>
+        </figure>
+      </td>
+      <td style="width:35%;margin:0 auto;" rowspan="2">
+        <table width="100%" style="border:none;table-layout:fixed;text-align:center;">
+          <tr style="border:none;text-align:center;">
+            <td style="text-align:center;border:none;">
+              <strong style="font-size: 11pt">{!! $res['profile']->namalengkap !!}</strong> <br>
+              JL. SERIKAYA NO. 17 BULUKUMBA 92512 <br>
+              TELP : {!! $res['profile']->fixedphone !!}
+            </td>
+          </tr>
+        </table>
+
+      </td>
+
+      <td style="width:25%;margin:0;" rowspan="2">
+        <table width="100%" style="border:none;table-layout:fixed;text-align:left;">
+          <tr>
+            <td colspan="4" style="border:none;font-size:7pt;">No. RM</td>
+            <td style="border:none;font-size:7pt;" colspan="9">: {!! $res['d'][0]->nocm !!} </td>
+
+          </tr>
+          <tr>
+            <td colspan="4" style="border:none;font-size:7pt;">Nama</td>
+            <td style="border:none;font-size:7pt;" colspan="9">: {!! $res['d'][0]->namapasien !!} ({!!
+              $res['d'][0]->jeniskelamin == 'PEREMPUAN' ? 'P' : 'L' !!})</td>
+
+          </tr>
+          <tr>
+            <td colspan="4" style="border:none;font-size:7pt;">Tanggal Lahir</td>
+            <td style="border:none;font-size:7pt;" colspan="9">: {!! date('d-m-Y',strtotime(
+              $res['d'][0]->tgllahir
+              )) !!}</td>
+          </tr>
+          <tr>
+            <td colspan="4" style="border:none;font-size:7pt;">NIK</td>
+            <td style="border:none;font-size:7pt;" colspan="9">: {!! $res['d'][0]->noidentitas !!}</td>
+
+          </tr>
+        </table>
+
+      </td>
+      <td style="width:10%;margin:0 auto;background:#000;color:#fff;text-align:center;font-size:36px">
+        RM</td>
+
+    </tr>
+    <tr>
+      <td style="text-align:center;font-size:36px">112</td>
+    </tr>
+  </table>
+
+  <table width="100%" class="table-border">
+    <tr>
+      <td colspan="3" style="text-align: center;font-size: 16px;padding: 5px" class="background-gray">
+        <b>RINGKASAN PULANG</b>
+      </td>
+    </tr>
+    <tr>
+
+      <td style="border-right: 1px solid #000;padding-left: 5px">
+        <span class="f-s-15">Ruang/bagian </span><span> : </span><span> @{{ item.obj[423800] }}</span>
+      </td>
+      <td style="border-right: 1px solid #000;padding-left: 5px">
+        <span class="f-s-15">Tanggal Masuk </span><span> : </span><span> @{{ item.obj[423801] }}</span>
+      </td>
+      <td style="padding-left: 5px">
+        <span class="f-s-15">Tanggal Keluar </span><span> : </span><span> @{{ item.obj[423802] }}</span>
+      </td>
+
+    </tr>
+  </table>
+  <section>
     <div class="border-doang" style="min-height: 50px">
       <span class="f-s-15 background-gray"><b>Riwayat Kesehatan</b> </span><span class="background-gray"> <b>:</b>
       </span><span> @{{ item.obj[423803] }}</span>
