@@ -152,7 +152,7 @@
 </head>
 
 <body>
-  <section class="sheet padding-10mm" style="font-family: Tohama;height: auto;">
+  
     <table width="100%" cellspacing="0" cellpadding="0" border="1">
       <tr>
         <td rowspan="4" colspan="3">
@@ -169,28 +169,27 @@
           (0413) 81292
         </td>
         <td colspan="2" class="border-left">No. RM </td>
-        <td colspan="8">: @{!! $res['d'][0]->nocm !!}</td>
+        <td colspan="8">: {!! $res['d'][0]->nocm !!}</td>
         <td rowspan="2" colspan="2" style="font-size:xx-large;text-align: center;" class="bg-dark">RM</td>
       </tr>
       <tr height="20px">
         <td colspan="2" class="border-left">Nama Lengkap</td>
-        <td colspan="8">: @{!! $res['d'][0]->namapasien !!} @{!! $res['d'][0]->jeniskelamin
+        <td colspan="8">: {!! $res['d'][0]->namapasien !!} {!! $res['d'][0]->jeniskelamin
           ==
           'PEREMPUAN' ? '(P)' : '(L)' !!}</td>
       </tr>
       <tr height="20px">
         <td colspan="2" class="border-left">Tanggal Lahir</td>
-        <td colspan="8">: @{!! date('d-m-Y',strtotime( $res['d'][0]->tgllahir )) !!}</td>
+        <td colspan="8">: {!! date('d-m-Y',strtotime( $res['d'][0]->tgllahir )) !!}</td>
         <td rowspan="2" colspan="2" style="font-size:xx-large;text-align: center;" class="border-left">07</td>
       </tr>
-     
-
       <tr height="20px">
         <td colspan='2' class="border-left">NIK</td>
-        <td colspan="8">: @{!! $res['d'][0]->noidentitas !!}</td>
+        <td colspan="8">: {!! $res['d'][0]->noidentitas !!}</td>
       </tr>
-      </table>
-        <table width="100%" class="table-border">
+    </table>
+    <section>
+    <table width="100%" class="table-border">
       <tr>
         <td colspan="4" style="text-align: center;font-size: 16px;padding: 5px" class="background-gray">
           <b>RINGKASAN PULANG</b>

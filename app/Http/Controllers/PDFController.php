@@ -89,13 +89,16 @@ class PDFController extends Controller
             'alamatlengkap' => 'Jl. Serikaya No.17, Caile, Kec. Ujung Bulu, Kabupaten Bulukumba, Sulawesi Selatan 92517'
 
         ];
+        $d1=[
+            'nocm' => 'ABC123',
+            'namapasien' => 'Nanma',
+            'jeniskelamin'=>'PEREMPUAN',
+            'tgllahir'=>'07-01-1988',
+            'noidentitas'=>'6464646464646'
+
+        ];
         $d = [
-            'd' =>(object) [
-                [
-                    'nocm' => 'ABC123',
-                    'namapasien' => 'Nanma'
-                ]
-            ],
+            'd' => [(object)$d1],
             'profile' => (object) $profile,
 
         ];

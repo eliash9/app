@@ -135,7 +135,7 @@
 
 <body ng-controller="cetakAsesmenAwalKeperawatanIGD">
     <section>
-        <table width="100%" class="table-border">
+        <table width="100%" cellspacing="0" cellpadding="0" border="1">
             <tr>
                 <td rowspan="4" colspan="3">
                     @if(stripos(\Request::url(), 'localhost') !== FALSE)
@@ -151,24 +151,23 @@
                     (0413) 81292
                 </td>
                 <td colspan="2" class="border-left">No. RM </td>
-                <td colspan="8">: @{!! $res['d'][0]->nocm !!}</td>
+                <td colspan="8">: {!! $res['d'][0]->nocm !!}</td>
                 <td rowspan="2" colspan="2" style="font-size:xx-large;text-align: center;" class="bg-dark">RM</td>
             </tr>
             <tr height="20px">
                 <td colspan="2" class="border-left">Nama Lengkap</td>
-                <td colspan="8">: @{!! $res['d'][0]->namapasien !!} @{!! $res['d'][0]->jeniskelamin
+                <td colspan="8">: {!! $res['d'][0]->namapasien !!} {!! $res['d'][0]->jeniskelamin
                     ==
                     'PEREMPUAN' ? '(P)' : '(L)' !!}</td>
             </tr>
             <tr height="20px">
                 <td colspan="2" class="border-left">Tanggal Lahir</td>
-                <td colspan="8">: @{!! date('d-m-Y',strtotime( $res['d'][0]->tgllahir )) !!}</td>
+                <td colspan="8">: {!! date('d-m-Y',strtotime( $res['d'][0]->tgllahir )) !!}</td>
                 <td rowspan="2" colspan="2" style="font-size:xx-large;text-align: center;" class="border-left">07</td>
             </tr>
-
             <tr height="20px">
                 <td colspan='2' class="border-left">NIK</td>
-                <td colspan="8">: @{!! $res['d'][0]->noidentitas !!}</td>
+                <td colspan="8">: {!! $res['d'][0]->noidentitas !!}</td>
             </tr>
 
             <tr height="20px" class="bg-dark">
@@ -900,7 +899,7 @@
                 <td colspan="18"><strong>Jika terdapat jawaban Ya, maka dilaporkan ke dietisien untuk dilakukan skrining
                         lanjut.</strong></td>
             </tr>
-       
+
             <tr>
                 <td colspan="4" rowspan="3" valign="top" class="border-bottom">Kebutuhan Edukasi</td>
                 <td colspan="18" class="border-left">Edukasi awal disampaikan tentang penggunaan
@@ -919,7 +918,7 @@
                     Tidak dapat memberikan edukasi kepada pasien atau keluarga,karena : @{{ item.obj[420789] ?
                     item.obj[420789] : '' }}</td>
             </tr>
-       
+
             <tr>
                 <td colspan="4" rowspan="3" class="border-bottom">Perencanaan Pulang</td>
                 <td colspan="4" class="border-bottom border-left">Pasien disarankan pulang: </td>
@@ -949,7 +948,7 @@
                 <td colspan="4" valign="top" class="border-bottom">Masalah Keperawatan</td>
                 <td colspan="18" class="border-left">@{{ item.obj[420800] ? item.obj[420800] : '' }}</td>
             </tr>
-        
+
             <tr>
                 <td colspan="4" rowspan="4" valign="top">Kriteria Evaluasi <br>Skala Likert (1-5)</td>
                 <td colspan="3" class="bordered" style="text-align:center;">1</td>
