@@ -137,7 +137,7 @@
     <section>
         <table width="100%" cellspacing="0" cellpadding="0" border="1">
             <tr>
-                <td rowspan="4" colspan="3">
+                <td rowspan="4" colspan="3" width="18%">
                     @if(stripos(\Request::url(), 'localhost') !== FALSE)
                     <img src="{{ asset('img/logo_only.png') }}" alt="" style="width: 60px;display:block; margin:auto;">
                     @else
@@ -147,8 +147,7 @@
                 </td>
                 <td rowspan="4" colspan="7" style="text-align:center;font-size:10px;">
                     <strong>{!! $res['profile']->namalengkap !!}</strong> <br>{!! $res['profile']->alamatlengkap
-                    !!}<br>TELP :
-                    (0413) 81292
+                    !!}<br>TELP : (0413) 81292
                 </td>
                 <td colspan="2" class="border-left">No. RM </td>
                 <td colspan="8">: {!! $res['d'][0]->nocm !!}</td>
@@ -169,6 +168,8 @@
                 <td colspan='2' class="border-left">NIK</td>
                 <td colspan="8">: {!! $res['d'][0]->noidentitas !!}</td>
             </tr>
+        </table>
+        <table width="100%" cellspacing="0" cellpadding="0" border="1">
 
             <tr height="20px" class="bg-dark">
                 <td colspan="22" style="font-size: x-large;">ASESMEN AWAL KEPERAWATAN IGD</td>
