@@ -90,7 +90,7 @@
         }
     </style>
 </head>
-<body ng-controller="cetakCPPOP"> 
+<body > 
     @if (!empty($res['d1']))
         <div class="format">
             <table>
