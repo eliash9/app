@@ -98,6 +98,7 @@ class PDFController extends Controller
             'noidentitas'=>'6464646464646'
 
         ];
+        
         $d = [
             'd' => [(object)$d1],
             'profile' => (object) $profile,
