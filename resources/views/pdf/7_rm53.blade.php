@@ -16,7 +16,7 @@
 
         body,
         html {
-            font-family: Arial, Helvetica, sans-serif;
+            font-family: DejaVu Sans, Verdana, Arial, sans-serif;
             font-size: 6pt;
             margin: 10px 20px;
         }

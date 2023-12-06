@@ -91,8 +91,8 @@ class PDFController extends Controller
 
         ];
         $d1=[
-            'nocm' => 'ABC123',
-            'namapasien' => 'Nanma',
+            'nocm' => '043099',
+            'namapasien' => 'Aulia Suprapto',
             'jeniskelamin'=>'PEREMPUAN',
             'tgllahir'=>'07-01-1988',
             'noidentitas'=>'6464646464646'
@@ -101,6 +101,7 @@ class PDFController extends Controller
         
         $d = [
             'd' => [(object)$d1],
+            'd1' => [(object)$d1],
             'profile' => (object) $profile,
 
         ];
