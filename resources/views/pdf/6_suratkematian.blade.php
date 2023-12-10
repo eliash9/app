@@ -103,7 +103,7 @@
 
 <body>
     <div class="header">
-        <img src="service/img/logo_only.png" alt="" style="width: 60px;">
+        <img src="{{public_path('service/img/logo_only.png')}}" alt="" style="width: 60px;">
         <h3>PEMERINTAH KABUPATEN BULUKUMBA</h3>
         <h2>DINAS KESEHATAN</h2>
         <h3>UPT RSUD H. ANDI SULTHAN DAENG RADJA</h3>

@@ -128,12 +128,10 @@
             <td style="width:15%;margin:0 auto;" rowspan="2">
                 <figure style="width:60px;margin:0 auto;">
 
-                    @if(stripos(\Request::url(), 'localhost') !== FALSE)
-                    <img src="{{ asset('img/logo_only.png') }}" alt="" style="width: 60px;">
-                    @else
+                   
 
-                    <img src="service/img/logo_only.png" alt="" style="width: 60px;">
-                    @endif
+                    <img src="{{public_path('service/img/logo_only.png')}}" alt="" style="width: 60px;">
+                   
                 </figure>
             </td>
             <td style="width:35%;margin:0 auto;" rowspan="2">

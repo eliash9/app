@@ -8,64 +8,60 @@
 	<title>Document</title>
 
 	<style>
-		* {
-			padding: 0;
-			margin: 0;
-			box-sizing: border-box;
-			font-family: DejaVu Sans, Verdana, Arial, sans-serif;
-		}
+		  * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+            font-family: DejaVu Sans, Verdana, Arial, sans-serif;
+        }
 
-		body,
-		html {
-			font-family: Arial, Helvetica, sans-serif;
-			font-size: 6pt;
-			margin: 10px 20px;
-		}
+        body,
+        html {
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 6pt;
+            margin: 10px 20px;
+        }
 
-		@page {
-			size: A4;
-			margin-top: 1rem;
-			margin-bottom: 1rem;
-			margin-left: 3rem;
-			margin-right: 1rem;
-			transform: scale(72%);
-		}
+        @page {
+            size: A4;
+            margin: 1rem 1rem 1rem 3rem;
+            transform: scale(72%);
+        }
 
-		table {
-			border: 1px solid #000;
-			border-collapse: collapse;
-			table-layout: fixed;
-			width: 100%;
-		}
+        table {
+            border: 1px solid #000;
+            border-collapse: collapse;
+            table-layout: fixed;
+            width: 100%;
+        }
 
-		tr td {
-			border: 1px solid #000;
-			border-collapse: collapse;
-			padding: .3rem;
-		}
+        td,
+        th {
+            border: 1px solid #000;
+            border-collapse: collapse;
+            padding: .3rem;
+        }
 
+        td input {
+            vertical-align: middle;
+        }
 
+        .format {
+            padding: 1rem;
+        }
 
-		td input {
-			vertical-align: middle;
-		}
+        .no-border-table {
+            border-collapse: collapse;
+        }
 
-		.format {
-			padding: 1rem;
-		}
-
-		.no-border-table {
-			border-collapse: collapse;
-		}
-
-		.no-border-table,
-		.no-border-table th,
-		.no-border-table td {
-			border: none;
-			table-layout: fixed;
-			width: 100%;
-		}
-	</style>
+        .no-border-table,
+        .no-border-table th,
+        .no-border-table td {
+            border: none;
+            table-layout: fixed;
+            width: 100%;
+        }
+    </style>
 </head>
 
 <body>
@@ -75,12 +71,10 @@
 			<td style="width:15%;margin:0 auto;" rowspan="2">
 				<figure style="width:60px;margin:0 auto;">
 
-					@if(stripos(\Request::url(), 'localhost') !== FALSE)
-					<img src="{{ asset('img/logo_only.png') }}" alt="" style="width: 60px;">
-					@else
+
 
 					<img src="service/img/logo_only.png" alt="" style="width: 60px;">
-					@endif
+
 				</figure>
 			</td>
 			<td style="width:35%;margin:0 auto;" rowspan="2">
@@ -200,10 +194,10 @@
 
 			<td rowspan="4">
 
-				
-					<h2><u><strong>Perhatian :</strong></u></h2>
-					<br>
-					<p class="border-bottom p05">
+
+				<h2><u><strong>Perhatian :</strong></u></h2>
+				<br>
+				<p class="border-bottom p05">
 					*) Beri tanda pada kotak-kotak &#9634; &#9634; &#9634; yang dimaksud
 					Setiap permintaan darah harap disertai contoh darah beku 5 cc minimal 2 cc
 					Nama dan identitas O.S. pada formulir dan contoh darahnya harus sama
@@ -436,7 +430,7 @@
 	<table>
 		<tr>
 			<td>
-			<p class="p05 border-bottom">DIISI OLEH PETUGAS UTD ...........................................</p>
+				<p class="p05 border-bottom">DIISI OLEH PETUGAS UTD ...........................................</p>
 				<div class="flex col-2 ">
 					<div class="border-right" style="width:90%">
 						<table style="font-size: smaller;">
@@ -464,7 +458,7 @@
 							</tr>
 						</table>
 					</div>
-					<div class="p05">
+					<div >
 						<table class="bordered">
 							<tr class="bordered">
 								<td class="bordered">ABO</td>

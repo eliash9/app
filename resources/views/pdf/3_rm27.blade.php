@@ -64,11 +64,9 @@
             <tr>
                 <td rowspan="4" colspan="2">
                     <figure style="width:80px;margin:0 auto;">
-                        @if(stripos(\Request::url(), 'localhost') !== FALSE)
-                        <img src="{{ asset('img/logo_only.png') }}" alt="" style="width: 60px;">
-                        @else
+                     
                         <img src="service/img/logo_only.png" alt="" style="width: 60px;">
-                        @endif
+                     
                     </figure>
                 </td>
                 <td rowspan="4" colspan="4" style="text-align:center;width:38%">
@@ -76,25 +74,27 @@
                     JL. SERIKAYA NO. 17 BULUKUMBA 92512 <br>
                     TELP : (0413) 81292
                 </td>
-                <td colspan="9" style="border:none;">No RM</td>
+                <td colspan="2" style="border:none;">No RM</td>
                 <td style="border:none;" colspan="4">: {!! $res['d1'][0]->nocm !!}</td>
                 <td rowspan="3" style="background:#000;color:#fff;width:100px;text-align:center;font-size:36px">RM</td>
             </tr>
             <tr>
-                <td width="30" colspan="9" style="border:none;">Nama Lengkap</td>
+                <td  colspan="2" style="border:none;">Nama Lengkap</td>
                 <td style="border:none;" colspan="3">: {!! $res['d1'][0]->namapasien !!}</td>
                 <td style="border:none;text-align: right;">{{ $res['d1'][0]->jeniskelamin == 'PEREMPUAN' ? 'P' : 'L' }}
                 </td>
             </tr>
             <tr>
-                <td width="30" colspan="9" style="border:none;">Tanggal Lahir</td>
+                <td  colspan="2" style="border:none;">Tanggal Lahir</td>
                 <td style="border:none;" colspan="4">: {!! date('d-m-Y',strtotime( $res['d1'][0]->tgllahir )) !!}</td>
             </tr>
             <tr>
-                <td width="30" colspan="9" style="border:none;">NIK</td>
+                <td  colspan="2" style="border:none;">NIK</td>
                 <td style="border:none;" colspan="4">: {!! $res['d1'][0]->noidentitas !!}</td>
                 <td style="text-align:center;font-size:36px">27</td>
             </tr>
+    </table>
+    <table>
             <tr>
                 <td colspan="20" style="text-align:center;background: #000;color: #fff;">
                     <h1>CATATAN PEMBERIAN DAN PEMANTAUAN OBAT PASIEN</h1>

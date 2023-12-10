@@ -8,165 +8,144 @@
     <title>Laporan Persalinan</title>
 
     <style>
-    * {
-        font-family: DejaVu Sans, Verdana, Arial, sans-serif;
-        padding: 0;
-        margin: 0;
-        box-sizing: border-box;
-    }
+        * {
+            font-family: DejaVu Sans, Verdana, Arial, sans-serif;
 
-    body {
-        margin: 10px 20px;
-    }
+        }
 
-    table {
-        page-break-inside: auto;
-    }
+        @page {
+            size: auto;
+            size: A4 portrait;
+        }
 
-    tr {
-        page-break-inside: avoid;
-        page-break-after: auto;
-    }
+        html,
+        body {
+            font-size: 9pt;
+            margin-top: 10px;
+            margin-left: 40px;
+        }
 
-    header {
-        border: 1px solid #000;
-        width: 100%;
-        display: flex;
-        justify-content: flex-start;
-    }
+        table {
+            page-break-inside: auto;
+        }
 
-    .logo {
-        width: 100px;
-        height: auto;
-        border-right: 1px solid #000;
-        padding: .3rem;
-    }
+        tr {
+            page-break-inside: avoid;
+            page-break-after: auto;
+        }
 
-    .kop {
-        padding: .3rem;
-        align-self: center;
-    }
+        header {
+            border: 1px solid #000;
+            width: 100%;
+            display: flex;
+            justify-content: flex-start;
+        }
 
-    .kop-text {
-        text-align: center;
-        font-size: smaller;
-    }
+        .logo {
+            width: 100px;
+            height: auto;
+            border-right: 1px solid #000;
+            padding: .3rem;
+        }
 
-    .info {
-        border-left: 1px solid #000;
-        border-right: 1px solid #000;
-        border-collapse: collapse;
-        flex-grow: 1;
-        padding: .3rem;
-    }
+        .kop {
+            padding: .3rem;
+            align-self: center;
+        }
 
-    .code {
-        display: flex;
-        flex-direction: column;
-        font-size: 34px;
-        flex-basis: 15%;
-        padding: 0;
-    }
+        .kop-text {
+            text-align: center;
+            font-size: smaller;
+        }
 
-    .code div:first-child {
-        width: 100%;
-        background: #000;
-        color: #fff;
-        text-align: center;
-        padding: .5rem;
-    }
+        .info {
+            border-left: 1px solid #000;
+            border-right: 1px solid #000;
+            border-collapse: collapse;
+            flex-grow: 1;
+            padding: .3rem;
+        }
 
-    .code div:last-child {
-        text-align: center;
-        width: 100%;
-        padding: .5rem;
-    }
+        .bg-dark {
+            background: #000;
+            color: #fff;
+            padding: .5rem;
+            text-align: center;
+        }
 
-    .title {
-        font-size: 16pt;
-        font-weight: bold;
-    }
+        .bordered {
+            border: 1px solid black;
+            border-collapse: collapse;
+            padding: .2rem;
+            box-sizing: border-box;
+        }
 
-    .bg-dark {
-        background: #000;
-        color: #fff;
-        padding: .5rem;
-        text-align: center;
-    }
+        .border-top,
+        .border-bottom,
+        .border-left,
+        .border-right {
+            border-collapse: collapse;
+            box-sizing: border-box;
+        }
 
-    .bordered {
-        border: 1px solid black;
-        border-collapse: collapse;
-        padding: .2rem;
-        box-sizing: border-box;
-    }
+        .border-top {
+            border-top: .1rem solid rgba(0, 0, 0, 0.45);
+        }
 
-    .border-top,
-    .border-bottom,
-    .border-left,
-    .border-right {
-        border-collapse: collapse;
-        box-sizing: border-box;
-    }
+        .border-bottom {
+            border-bottom: .1rem solid rgba(0, 0, 0, 0.45);
+        }
 
-    .border-top {
-        border-top: .1rem solid rgba(0, 0, 0, 0.45);
-    }
+        .border-left {
+            border-left: .1rem solid rgba(0, 0, 0, 0.45);
+        }
 
-    .border-bottom {
-        border-bottom: .1rem solid rgba(0, 0, 0, 0.45);
-    }
+        .border-right {
+            border-right: .1rem solid rgba(0, 0, 0, 0.45);
+        }
 
-    .border-left {
-        border-left: .1rem solid rgba(0, 0, 0, 0.45);
-    }
+        .flex {
+            display: flex;
+        }
 
-    .border-right {
-        border-right: .1rem solid rgba(0, 0, 0, 0.45);
-    }
+        .flex .basis50,
+        .col-2 {
+            flex-basis: 50%;
+        }
 
-    .flex {
-        display: flex;
-    }
+        ul li:not(:first-child) {
+            padding: .3rem;
+        }
 
-    .flex .basis50,
-    .col-2 {
-        flex-basis: 50%;
-    }
+        ul li {
+            list-style: none;
+        }
 
-    ul li:not(:first-child) {
-        padding: .3rem;
-    }
+        .basis50 ul li:first-child {
+            border-bottom: 1px solid #000;
+            padding: .3rem;
+        }
 
-    ul li {
-        list-style: none;
-    }
+        table {
+            border: 1px solid #000;
+            border-collapse: collapse;
+            font-size: x-small;
+        }
 
-    .basis50 ul li:first-child {
-        border-bottom: 1px solid #000;
-        padding: .3rem;
-    }
+        tr td {
+            border: 1px solid #000;
+            border-collapse: collapse;
+        }
 
-    table {
-        border: 1px solid #000;
-        border-collapse: collapse;
-        font-size: x-small;
-    }
+        #content>tr td,
+        .info table>tr td {
+            width: 20px;
+        }
 
-    tr td {
-        border: 1px solid #000;
-        border-collapse: collapse;
-    }
-
-    #content>tr td,
-    .info table>tr td {
-        width: 20px;
-    }
-
-    td {
-        padding: .3rem;
-    }
-</style>
+        td {
+            padding: .3rem;
+        }
+    </style>
 
 </head>
 
@@ -175,14 +154,12 @@
         <table width="100%" id="content" style="table-layout:fixed">
             <tr style="border:none;border-top:1px solid #000">
                 <td rowspan="4" style="border:none;border-right:1px solid #000">
-                    @if(stripos(\Request::url(), 'localhost') !== FALSE)
-                    <img src="{{ asset('img/logo_only.png') }}" alt="" style="width: 60px;display:block; margin:auto;">
-                    @else
+
                     <img src="{{ public_path('service/img/logo_only.png') }}" alt=""
                         style="width: 60px;display:block; margin:auto;">
-                    @endif
+
                 </td>
-                <td rowspan="4" colspan="3" style="text-align:center;font-size:larger;border:none"><strong>{!!
+                <td rowspan="4" colspan="3" style="text-align:center;border:none"><strong>{!!
                         $res['profile']->namalengkap !!}</strong> <br>{!! $res['profile']->alamatlengkap !!}<br>TELP :
                     (0413) 81292</td>
                 <td style="border:none;border-left:1px solid #000">No. RM </td>
@@ -208,7 +185,7 @@
                     LAPORAN PERSALINAN
                 </td>
             </tr>
-            <tr >
+            <tr>
                 <td style="border:none;">G : @{{ item.obj[31100366] ? item.obj[31100366] : '' }}</td>
                 <td style="border:none;">P : @{{ item.obj[31100367] ? item.obj[31100367] : '' }}</td>
                 <td style="border:none;">A : @{{ item.obj[31100368] ? item.obj[31100368] : '' }}</td>

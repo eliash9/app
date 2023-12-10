@@ -138,12 +138,10 @@
         <table width="100%" cellspacing="0" cellpadding="0" border="1">
             <tr>
                 <td rowspan="4" colspan="3" width="18%">
-                    @if(stripos(\Request::url(), 'localhost') !== FALSE)
-                    <img src="{{ asset('img/logo_only.png') }}" alt="" style="width: 60px;display:block; margin:auto;">
-                    @else
+                  
 
                     <img src="service/img/logo_only.png" alt="" style="width: 60px;display:block;">
-                    @endif
+                  
                 </td>
                 <td rowspan="4" colspan="7" style="text-align:center;font-size:10px;">
                     <strong>{!! $res['profile']->namalengkap !!}</strong> <br>{!! $res['profile']->alamatlengkap

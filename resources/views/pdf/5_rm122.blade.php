@@ -192,12 +192,9 @@
       <td style="width:15%;margin:0 auto;" rowspan="2">
         <figure style="width:60px;margin:0 auto;">
 
-          @if(stripos(\Request::url(), 'localhost') !== FALSE)
-          <img src="{{ asset('img/logo_only.png') }}" alt="" style="width: 60px;">
-          @else
 
           <img src="service/img/logo_only.png" alt="" style="width: 60px;">
-          @endif
+         
         </figure>
       </td>
       <td style="width:35%;margin:0 auto;" rowspan="2">
@@ -348,50 +345,56 @@
       <span class="f-s-15 background-gray"><b>Tindak Lanjut</b> </span><span class="background-gray"> <b>:</b>
       </span><span> @{{ item.obj[423815] }}</span>
     </div>
-    <div class="border-doang" style="overflow: auto">
-      <br>
-      <br>
-      <div style="float: right;width: 40%;text-align: end;padding-right: 5px">
-        <span>Bulukumba, </span> <span> @{{ hariTgl.split(' ')[0] }}, </span> <span>Jam : </span> <span> @{{
-          hariTgl.split(' ')[1] }} </span> <span> WITA</span>
-      </div>
-      <br>
-      <br>
-      <div style="width: 33%;float: left;padding: 15px;box-sizing: border-box;">
+    <div class="border-doang" style="overflow: auto; min-height: 200px">
+    <br>
+    <br>
+    <div style="float: right; width: 40%; text-align: end; padding-right: 5px">
+        <span>Bulukumba, </span>
+        <span>@{{ hariTgl.split(' ')[0] }}, </span>
+        <span>Jam : </span>
+        <span>@{{ hariTgl.split(' ')[1] }} </span>
+        <span> WITA</span>
+    </div>
+    <br>
+    <br>
+
+    <div style="text-align: adjustment-center">
+    <div style="width: 33%; float: left; padding: 15px; box-sizing: border-box;">
         <div style="text-align: center">
-          <span>Pasien</span>
+            <span>Pasien</span>
         </div>
         <br>
         <div id="qrcodePasien" style="text-align: center"></div>
         <br>
         <div style="text-align: center">
-          <span>( @{{ item.obj[423817] }} )</span>
+            <span>( @{{ item.obj[423817] }} )</span>
         </div>
-      </div>
-      <div style="width: 33%;float: left;padding: 15px;box-sizing: border-box;">
+    </div>
+    <div style="float: left; padding: 15px; box-sizing: border-box;">
         <div style="text-align: center">
-          <span>Keluarga Pasien</span>
+            <span>Keluarga Pasien</span>
         </div>
         <br>
         <div id="qrcodeKeluargaPasien" style="text-align: center"></div>
         <br>
         <div style="text-align: center">
-          <span>( @{{ item.obj[423818] }} )</span>
+            <span>( @{{ item.obj[423818] }} )</span>
         </div>
-      </div>
-      <div style="width: 33%;float: left;padding: 15px;box-sizing: border-box;">
+    </div>
+    <div style="width: 33%; float: left; padding: 15px; box-sizing: border-box;">
         <div style="text-align: center">
-          <span>DPJP</span>
+            <span>DPJP</span>
         </div>
         <br>
         <div id="qrcodeDPJP" style="text-align: center"></div>
         <br>
         <div style="text-align: center">
-          <span>( @{{ item.obj[423819] }} )</span>
+            <span>( @{{ item.obj[423819] }} )</span>
         </div>
-      </div>
     </div>
-    <div class="border-doang" style="padding: 10px;box-sizing: border-box;overflow: auto;">
+    </div>
+</div>
+    <div class="border-doang" style="padding: 10px;box-sizing: border-box;overflow: auto;min-height: 30px">
       <div style="float: left;width: 50%">
         <div class="f-s-15"><i>Lembar 1 : Berkas Rekam Medis</i></div>
         <div class="f-s-15"><i>Lembar 3 : Pasien</i></div>

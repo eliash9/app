@@ -6,31 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Partograf</title>
-    @if (stripos(\Request::url(), 'localhost') !== false)
-    <script src="{{ asset('js/Chart.js') }}"></script>
-    <script src="{{ asset('js/jquery.min.js') }}"></script>
-    <script src="{{ asset('js/jquery.qr-code.js') }}"></script>
-    <script type="text/javascript" src="{{ asset('js/qrcode/src/jquery.qrcode.js') }}"></script>
-    <script type="text/javascript" src="{{ asset('js/qrcode/src/qrcode.js') }}"></script>
-    <!-- angular -->
-    <script src="{{ asset('js/angular/angular.min.js') }}" type="text/javascript"></script>
-    <script src="{{ asset('js/angular/angular-route.min.js') }}" type="text/javascript"></script>
-    <script type="text/javascript" src="{{ asset('js/angular/angular-animate.min.js') }}"></script>
-    <script type="text/javascript" src="{{ asset('js/angular/angular-aria.min.js') }}"></script>
-    <script src="{{ asset('js/angular/angular-material.js') }}" type="text/javascript"></script>
-    @else
-    <script src="{{ asset('service/js/Chart.js') }}"></script>
-    <script src="{{ asset('service/js/jquery.min.js') }}"></script>
-    <script src="{{ asset('service/js/jquery.qr-code.js') }}"></script>
-    <script type="text/javascript" src="{{ asset('js/qrcode/src/jquery.qrcode.js') }}"></script>
-    <script type="text/javascript" src="{{ asset('js/qrcode/src/qrcode.js') }}"></script>
-    <!-- angular -->
-    <script src="{{ asset('service/js/angular/angular.min.js') }}" type="text/javascript"></script>
-    <script src="{{ asset('service/js/angular/angular-route.min.js') }}" type="text/javascript"></script>
-    <script type="text/javascript" src="{{ asset('service/js/angular/angular-animate.min.js') }}"></script>
-    <script type="text/javascript" src="{{ asset('service/js/angular/angular-aria.min.js') }}"></script>
-    <script src="{{ asset('service/js/angular/angular-material.js') }}" type="text/javascript"></script>
-    @endif
+
     <style>
         * {
             font-family: DejaVu Sans, Verdana, Arial, sans-serif;
@@ -45,9 +21,7 @@
 
         }
 
-        table {
-            page-break-inside: auto
-        }
+       
 
         tr {
             page-break-inside: avoid;
@@ -58,6 +32,8 @@
             border: 1px solid #000;
             border-collapse: collapse;
             table-layout: fixed;
+            padding: .3rem;
+            page-break-inside: auto
         }
 
         tr td {
@@ -131,64 +107,85 @@
         }
 
         #rotate {
-            
+
             -ms-writing-mode: tb-rl;
             -webkit-writing-mode: vertical-rl;
             writing-mode: vertical-rl;
             transform: translate(0, 100%) rotate(-90deg);
             white-space: nowrap;
-/*
+            /*
             -ms-writing-mode: tb-rl;
             -webkit-writing-mode: vertical-rl;
             writing-mode: vertical-rl;
             transform: translate(0, 100%) rotate(-90deg);
             */
-            
+
         }
     </style>
 </head>
 
 <body ng-controller="cetakPartograf">
+    <table width="100%" style="table-layout:fixed;text-align:center;">
+        <tr>
+            <td style="width:15%;margin:0 auto;" rowspan="2">
+                <figure style="width:60px;margin:0 auto;">
+
+
+
+                    <img src="{{public_path('service/img/logo_only.png')}}" alt="" style="width: 60px;">
+
+                </figure>
+            </td>
+            <td style="width:35%;margin:0 auto;" rowspan="2">
+                <table width="100%" style="border:none;table-layout:fixed;text-align:center;">
+                    <tr style="border:none;text-align:center;">
+                        <td style="text-align:center;border:none;">
+                            <strong style="font-size: 11pt">{!! $res['profile']->namalengkap !!}</strong> <br>
+                            JL. SERIKAYA NO. 17 BULUKUMBA 92512 <br>
+                            TELP : {!! $res['profile']->fixedphone !!}
+                        </td>
+                    </tr>
+                </table>
+
+            </td>
+
+            <td style="width:25%;margin:0;" rowspan="2">
+                <table width="100%" style="border:none;table-layout:fixed;text-align:left;">
+                    <tr>
+                        <td colspan="4" style="border:none;font-size:7pt;">No. RM</td>
+                        <td style="border:none;font-size:7pt;" colspan="9">: {!! $res['d'][0]->nocm !!} </td>
+
+                    </tr>
+                    <tr>
+                        <td colspan="4" style="border:none;font-size:7pt;">Nama</td>
+                        <td style="border:none;font-size:7pt;" colspan="9">: {!! $res['d'][0]->namapasien !!} ({!!
+                            $res['d'][0]->jeniskelamin == 'PEREMPUAN' ? 'P' : 'L' !!})</td>
+
+                    </tr>
+                    <tr>
+                        <td colspan="4" style="border:none;font-size:7pt;">Tanggal Lahir</td>
+                        <td style="border:none;font-size:7pt;" colspan="9">: {!! date('d-m-Y',strtotime(
+                            $res['d'][0]->tgllahir
+                            )) !!}</td>
+                    </tr>
+                    <tr>
+                        <td colspan="4" style="border:none;font-size:7pt;">NIK</td>
+                        <td style="border:none;font-size:7pt;" colspan="9">: {!! $res['d'][0]->noidentitas !!}</td>
+
+                    </tr>
+                </table>
+
+            </td>
+            <td style="width:10%;margin:0 auto;background:#000;color:#fff;text-align:center;font-size:36px">
+                RM</td>
+
+        </tr>
+        <tr>
+            <td style="text-align:center;font-size:36px">56</td>
+        </tr>
+    </table>
     <table width='100%'>
-        <tr height=20 class="noborder">
-            <td colspan="8" rowspan="4" class="noborder-tb text-center" style="padding:.3rem">
-                @if(stripos(\Request::url(), 'localhost') !== FALSE)
-                <img src="{{ asset('img/logo_only.png') }}" alt="" style="width: 60px;display:block; margin:auto;">
-                @else
-                <img src="@{{ asset('service/img/logo_only.png') }}" alt=""
-                    style="width: 60px;display:block; margin:auto;">
-                @endif
-            </td>
-            <td colspan="17" rowspan="4" class="noborder-tb">
-                <strong>{!! $res['profile']->namalengkap !!}</strong> <br>{!! $res['profile']->alamatlengkap !!}<br>TELP
-                : (0413) 81292
-            </td>
-            <td colspan="6" class="noborder">No. RM </td>
-            <td colspan="13" class="noborder">
-                : {!! $res['d'][0]->nocm !!}
-            </td>
-            <td colspan="5" rowspan="2" style="font-size:xx-large;text-align: center;" class="bg-dark">RM</td>
-        </tr>
-        <tr class="noborder">
-            <td colspan="6" class="noborder">Nama Lengkap</td>
-            <td colspan="11" class="noborder">
-                : {!! $res['d'][0]->namapasien !!}
-            </td>
-            <td colspan="2" class="noborder">{!! $res['d'][0]->jeniskelamin == 'PEREMPUAN' ? '(P)' : '(L)' !!}</td>
-        </tr>
-        <tr class="noborder">
-            <td colspan="6" class="noborder">Tanggal Lahir</td>
-            <td colspan="13" class="noborder">
-                : {!! date('d-m-Y',strtotime( $res['d'][0]->tgllahir )) !!}
-            </td>
-            <td colspan="5" rowspan="2" style="font-size:xx-large;text-align: center;">56</td>
-        </tr>
-        <tr class="noborder">
-            <td colspan="6" class="noborder">NIK</td>
-            <td colspan="11" class="noborder">
-                : {!! $res['d'][0]->noidentitas !!}
-            </td>
-        </tr>
+        
         <tr class="bordered bg-dark">
             <th colspan="49" height="20pt">PARTOGRAF</th>
         </tr>
@@ -312,12 +309,13 @@
                 </div>
 
             </td>
-            <td colspan="39" style="text-align:right;border:none" >
-             <canvas id="chartServiksKontraksi"
-                    > 
-                    <img src="https://quickchart.io/chart?w=300&h=170&c=%7B%0A++%22type%22%3A+%22bar%22%2C%0A++%22data%22%3A+%7B%0A++++%22labels%22%3A+%5B2012%2C+2013%2C+2014%2C+2015%2C+2016%5D%2C%0A++++%22datasets%22%3A+%5B%7B%0A++++++%22label%22%3A+%22Users%22%2C%0A++++++%22data%22%3A+%5B120%2C+60%2C+50%2C+180%2C+120%5D%0A++++%7D%5D%0A++%7D%0A%7D" />
-          
-                </canvas></td>
+            <td colspan="39" style="text-align:right;border:none">
+                <canvas id="chartServiksKontraksi">
+                    <img
+                        src="https://quickchart.io/chart?w=300&h=170&c=%7B%0A++%22type%22%3A+%22bar%22%2C%0A++%22data%22%3A+%7B%0A++++%22labels%22%3A+%5B2012%2C+2013%2C+2014%2C+2015%2C+2016%5D%2C%0A++++%22datasets%22%3A+%5B%7B%0A++++++%22label%22%3A+%22Users%22%2C%0A++++++%22data%22%3A+%5B120%2C+60%2C+50%2C+180%2C+120%5D%0A++++%7D%5D%0A++%7D%0A%7D" />
+
+                </canvas>
+            </td>
         </tr>
         <tr>
             <td colspan="10" style="border:none;text-align:center">Nadi & Tekanan Darah</td>

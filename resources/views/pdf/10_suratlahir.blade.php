@@ -87,11 +87,9 @@
 
 <body ng-controller="cetakSuketKelahiran">
     <div class="header">
-        @if(stripos(\Request::url(), 'localhost') !== FALSE)
-        <img src="{{ asset('img/logo_only.png') }}" alt="" style="width: 60px;">
-        @else
+      
         <img src="{{ public_path('service/img/logo_only.png') }}" alt="" style="width: 60px;">
-        @endif
+       
 
         <h3>PEMERINTAH KABUPATEN BULUKUMBA</h3>
 
