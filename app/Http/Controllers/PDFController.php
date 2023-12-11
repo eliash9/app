@@ -98,6 +98,8 @@ class PDFController extends Controller
             'noidentitas'=>'6464646464646'
 
         ];
+
+        
         
         $d = [
             'd' => [(object)$d1],
@@ -110,7 +112,22 @@ class PDFController extends Controller
 
             'title' => 'judul',
             'namars' => 'RSUD H.A. Sulthan Daeng Radja Bulukumba',
-            'res' => $d
+            'res' => [
+                'd' => [(object)$d1],
+                'd1' => [(object)$d1],
+                'd2'=> [(object)$d1],
+                'd3' => [(object)$d1],
+                'd4' => [(object)$d1],
+                'd5' => [(object)$d1],
+                'd6' => [(object)$d1],
+                'd7' => [(object)$d1],
+                'd8' => [(object)$d1],
+                'd9' => [(object)$d1],
+                'd10' => [(object)$d1],
+                'd11' => [(object)$d1],
+                'profile' => (object) $profile,
+    
+            ]
         ];
 
 
