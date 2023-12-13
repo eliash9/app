@@ -107,6 +107,9 @@ class PDFController extends Controller
             'profile' => (object) $profile,
 
         ];
+        $image=[
+            'image'=>'img/hiperbilirubin.png'
+        ];
 
         $data = [
 
@@ -126,6 +129,7 @@ class PDFController extends Controller
                 'd10' => [(object)$d1],
                 'd11' => [(object)$d1],
                 'profile' => (object) $profile,
+                'img'=>(object)$image
     
             ]
         ];
