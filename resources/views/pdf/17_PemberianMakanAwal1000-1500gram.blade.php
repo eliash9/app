@@ -132,7 +132,7 @@
             <td colspan="13" class="noborder" style="font-size: 10pt">
                 : {!! $res['d'][0]->nocm  !!}
             </td>
-            <td colspan="5" rowspan="2" class="border-lr bg-dark" style="font-size: xxx-large;text-align:center">RM</td>
+            <td colspan="5" rowspan="2" class="border-lr bg-dark" style="font-size: 36px;text-align:center">RM</td>
         </tr>
         <tr class="noborder">
             <td colspan="6" class="noborder" style="font-size: 10pt">Nama Lengkap</td>
@@ -146,7 +146,7 @@
             <td colspan="13" class="noborder" style="font-size: 10pt">
                 : {!! date('d-m-Y',strtotime( $res['d'][0]->tgllahir  )) !!}
             </td>
-            <td colspan="5" class="border-lr" rowspan="2" style="font-size: xxx-large;text-align:center">69</td>
+            <td colspan="5" class="border-lr" rowspan="2" style="font-size: 36px;text-align:center">69</td>
         </tr>
         <tr class="noborder">
             <td colspan="6" class="noborder" style="font-size: 10pt">NIK</td>
@@ -325,28 +325,28 @@
 			<td colspan="3">&nbsp;@{{item.obj[1001013] | toDate | date:'dd MMMM yyyy'}}</td>
 			<td colspan="2">&nbsp;@{{ item.obj[1001014] ? item.obj[1001014] : '' }}</td>
 			<td colspan="3">&nbsp;@{{ item.obj[1001015] ? item.obj[1001015] : '' }}</td>
-			<td colspan="2" class="noborder btm">&nbsp;@{{ item.obj[1001016] ? item.obj[1001016] : '' }}</td>
-			<td colspan="2" class="noborder btm" style="text-align: right;">cc&nbsp;</td>
+			<td colspan="2" class="noborder btm btp">&nbsp;@{{ item.obj[1001016] ? item.obj[1001016] : '' }}</td>
+			<td colspan="2" class="noborder btm btp" style="text-align: right;">cc&nbsp;</td>
 			<td colspan="3">&nbsp;@{{ item.obj[1001017] ? item.obj[1001017] : '' }}</td>
-			<td colspan="2" class="noborder btm"></td>
-			<td class="noborder br btm" style="text-align: right;">@{{ item.obj[1001018] ? item.obj[1001018] : '' }} cc&nbsp;</td>
-			<td colspan="2" class="text-center noborder btm">@{{ item.obj[1001019] ? '[&#10004;]' : '[&nbsp;&nbsp;&nbsp;]' }} ASI</td>
-			<td colspan="2" class="noborder text-center btm">@{{ item.obj[1001020] ? '[&#10004;]' : '[&nbsp;&nbsp;&nbsp;]' }} F</td>
-			<td colspan="" class="text-center blf noborder btm">@{{ item.obj[1001021] ? '[&#10004;]' : '[&nbsp;&nbsp;&nbsp;]' }} 1</td>
-			<td colspan="" class="text-center noborder btm">@{{ item.obj[1001022] ? '[&#10004;]' : '[&nbsp;&nbsp;&nbsp;]' }} 2</td>
-			<td colspan="" class="text-center noborder btm">@{{ item.obj[1001023] ? '[&#10004;]' : '[&nbsp;&nbsp;&nbsp;]' }} 3</td>
-			<td colspan="" class="text-center noborder btm">@{{ item.obj[1001024] ? '[&#10004;]' : '[&nbsp;&nbsp;&nbsp;]' }} 4</td>
-			<td colspan="" class="text-center noborder btm">@{{ item.obj[1001025] ? '[&#10004;]' : '[&nbsp;&nbsp;&nbsp;]' }} 5</td>
-			<td colspan="" class="text-center noborder btm">@{{ item.obj[1001026] ? '[&#10004;]' : '[&nbsp;&nbsp;&nbsp;]' }} 6</td>
-			<td colspan="" class="text-center noborder btm">@{{ item.obj[1001027] ? '[&#10004;]' : '[&nbsp;&nbsp;&nbsp;]' }} 7</td>
-			<td colspan="" class="text-center noborder btm">@{{ item.obj[1001028] ? '[&#10004;]' : '[&nbsp;&nbsp;&nbsp;]' }} 8</td>
-			<td colspan="" class="text-center noborder btm">@{{ item.obj[1001029] ? '[&#10004;]' : '[&nbsp;&nbsp;&nbsp;]' }} 9</td>
-			<td colspan="" class="text-center noborder btm">@{{ item.obj[1001030] ? '[&#10004;]' : '[&nbsp;&nbsp;&nbsp;]' }}10</td>
-			<td colspan="" class="text-center noborder btm">@{{ item.obj[1001031] ? '[&#10004;]' : '[&nbsp;&nbsp;&nbsp;]' }}11</td>
-			<td colspan="" class="text-center noborder btm">@{{ item.obj[1001032] ? '[&#10004;]' : '[&nbsp;&nbsp;&nbsp;]' }}12</td>
-			<td colspan="" class="text-center noborder blf btm">@{{ item.obj[1001032] ? '[&#10004;]' : '[&nbsp;&nbsp;&nbsp;]' }}Dis</td>
-			<td colspan="3" class="text-center noborder btm">@{{ item.obj[1001033] ? '[&#10004;]' : '[&nbsp;&nbsp;&nbsp;]' }}M - emp su</td>
-			<td colspan="" class="text-center noborder btm">@{{ item.obj[1001035] ? '[&#10004;]' : '[&nbsp;&nbsp;&nbsp;]' }}D</td>
+			<td colspan="2" class="noborder btm btp"></td>
+			<td class="noborder br btm btp" style="text-align: right;">@{{ item.obj[1001018] ? item.obj[1001018] : '' }} cc&nbsp;</td>
+			<td colspan="2" class="text-center noborder btm btp">@{{ item.obj[1001019] ? '[&#10004;]' : '[&nbsp;&nbsp;&nbsp;]' }} ASI</td>
+			<td colspan="2" class="noborder text-center btm btp">@{{ item.obj[1001020] ? '[&#10004;]' : '[&nbsp;&nbsp;&nbsp;]' }} F</td>
+			<td colspan="" class="text-center blf noborder btm btp">@{{ item.obj[1001021] ? '[&#10004;]' : '[&nbsp;&nbsp;&nbsp;]' }} 1</td>
+			<td colspan="" class="text-center noborder btm btp">@{{ item.obj[1001022] ? '[&#10004;]' : '[&nbsp;&nbsp;&nbsp;]' }} 2</td>
+			<td colspan="" class="text-center noborder btm btp">@{{ item.obj[1001023] ? '[&#10004;]' : '[&nbsp;&nbsp;&nbsp;]' }} 3</td>
+			<td colspan="" class="text-center noborder btm btp">@{{ item.obj[1001024] ? '[&#10004;]' : '[&nbsp;&nbsp;&nbsp;]' }} 4</td>
+			<td colspan="" class="text-center noborder btm btp">@{{ item.obj[1001025] ? '[&#10004;]' : '[&nbsp;&nbsp;&nbsp;]' }} 5</td>
+			<td colspan="" class="text-center noborder btm btp">@{{ item.obj[1001026] ? '[&#10004;]' : '[&nbsp;&nbsp;&nbsp;]' }} 6</td>
+			<td colspan="" class="text-center noborder btm btp">@{{ item.obj[1001027] ? '[&#10004;]' : '[&nbsp;&nbsp;&nbsp;]' }} 7</td>
+			<td colspan="" class="text-center noborder btm btp">@{{ item.obj[1001028] ? '[&#10004;]' : '[&nbsp;&nbsp;&nbsp;]' }} 8</td>
+			<td colspan="" class="text-center noborder btm btp">@{{ item.obj[1001029] ? '[&#10004;]' : '[&nbsp;&nbsp;&nbsp;]' }} 9</td>
+			<td colspan="" class="text-center noborder btm btp">@{{ item.obj[1001030] ? '[&#10004;]' : '[&nbsp;&nbsp;&nbsp;]' }}10</td>
+			<td colspan="" class="text-center noborder btm btp">@{{ item.obj[1001031] ? '[&#10004;]' : '[&nbsp;&nbsp;&nbsp;]' }}11</td>
+			<td colspan="" class="text-center noborder btm btp">@{{ item.obj[1001032] ? '[&#10004;]' : '[&nbsp;&nbsp;&nbsp;]' }}12</td>
+			<td colspan="" class="text-center noborder blf btm btp">@{{ item.obj[1001032] ? '[&#10004;]' : '[&nbsp;&nbsp;&nbsp;]' }}Dis</td>
+			<td colspan="3" class="text-center noborder btm btp">@{{ item.obj[1001033] ? '[&#10004;]' : '[&nbsp;&nbsp;&nbsp;]' }}M - emp su</td>
+			<td colspan="" class="text-center noborder btm btp">@{{ item.obj[1001035] ? '[&#10004;]' : '[&nbsp;&nbsp;&nbsp;]' }}D</td>
 			<td colspan="7" class="text-center">@{{ item.obj[1001036] ? item.obj[1001036] : '' }}</td>
 		</tr>
 		<tr>
@@ -359,8 +359,8 @@
 			<td colspan="3">&nbsp;@{{ item.obj[1001041] ? item.obj[1001041] : '' }}</td>
 			<td colspan="2" class="noborder btm"></td>
 			<td class="noborder br btm" style="text-align: right;">@{{ item.obj[1001042] ? item.obj[1001042] : '' }} cc&nbsp;</td>
-			<td colspan="2" class="text-center noborder btm">@{{ item.obj[1001043] ? '[&#10004;]' : '[&nbsp;&nbsp;&nbsp;]' }} ASI</td>
-			<td colspan="2" class="noborder text-center btm">@{{ item.obj[1001044] ? '[&#10004;]' : '[&nbsp;&nbsp;&nbsp;]' }} F</td>
+			<td colspan="2" class="text-center noborder btm btp">@{{ item.obj[1001043] ? '[&#10004;]' : '[&nbsp;&nbsp;&nbsp;]' }} ASI</td>
+			<td colspan="2" class="noborder text-center btm btp">@{{ item.obj[1001044] ? '[&#10004;]' : '[&nbsp;&nbsp;&nbsp;]' }} F</td>
 			<td colspan="" class="text-center blf noborder btm">@{{ item.obj[1001045] ? '[&#10004;]' : '[&nbsp;&nbsp;&nbsp;]' }} 1</td>
 			<td colspan="" class="text-center noborder btm">@{{ item.obj[1001046] ? '[&#10004;]' : '[&nbsp;&nbsp;&nbsp;]' }} 2</td>
 			<td colspan="" class="text-center noborder btm">@{{ item.obj[1001047] ? '[&#10004;]' : '[&nbsp;&nbsp;&nbsp;]' }} 3</td>
@@ -470,28 +470,28 @@
 			<td colspan="3">&nbsp;@{{item.obj[1001133] | toDate | date:'dd MMMM yyyy'}}</td>
 			<td colspan="2">&nbsp;@{{ item.obj[1001134] ? item.obj[1001134] : '' }}</td>
 			<td colspan="3">&nbsp;@{{ item.obj[1001135] ? item.obj[1001135] : '' }}</td>
-			<td colspan="2" class="noborder btm">&nbsp;@{{ item.obj[1001136] ? item.obj[1001136] : '' }}</td>
-			<td colspan="2" class="noborder btm" style="text-align: right;">cc&nbsp;</td>
+			<td colspan="2" class="noborder btm btp">&nbsp;@{{ item.obj[1001136] ? item.obj[1001136] : '' }}</td>
+			<td colspan="2" class="noborder btm btp" style="text-align: right;">cc&nbsp;</td>
 			<td colspan="3">&nbsp;@{{ item.obj[1001137] ? item.obj[1001137] : '' }}</td>
-			<td colspan="2" class="noborder btm"></td>
-			<td class="noborder br btm" style="text-align: right;">@{{ item.obj[1001138] ? item.obj[1001138] : '' }} cc&nbsp;</td>
-			<td colspan="2" class="text-center noborder btm">@{{ item.obj[1001139] ? '[&#10004;]' : '[&nbsp;&nbsp;&nbsp;]' }} ASI</td>
-			<td colspan="2" class="noborder text-center btm">@{{ item.obj[1001140] ? '[&#10004;]' : '[&nbsp;&nbsp;&nbsp;]' }} F</td>
-			<td colspan="" class="text-center blf noborder btm">@{{ item.obj[1001141] ? '[&#10004;]' : '[&nbsp;&nbsp;&nbsp;]' }} 1</td>
-			<td colspan="" class="text-center noborder btm">@{{ item.obj[1001142] ? '[&#10004;]' : '[&nbsp;&nbsp;&nbsp;]' }} 2</td>
-			<td colspan="" class="text-center noborder btm">@{{ item.obj[1001143] ? '[&#10004;]' : '[&nbsp;&nbsp;&nbsp;]' }} 3</td>
-			<td colspan="" class="text-center noborder btm">@{{ item.obj[1001144] ? '[&#10004;]' : '[&nbsp;&nbsp;&nbsp;]' }} 4</td>
-			<td colspan="" class="text-center noborder btm">@{{ item.obj[1001145] ? '[&#10004;]' : '[&nbsp;&nbsp;&nbsp;]' }} 5</td>
-			<td colspan="" class="text-center noborder btm">@{{ item.obj[1001146] ? '[&#10004;]' : '[&nbsp;&nbsp;&nbsp;]' }} 6</td>
-			<td colspan="" class="text-center noborder btm">@{{ item.obj[1001147] ? '[&#10004;]' : '[&nbsp;&nbsp;&nbsp;]' }} 7</td>
-			<td colspan="" class="text-center noborder btm">@{{ item.obj[1001148] ? '[&#10004;]' : '[&nbsp;&nbsp;&nbsp;]' }} 8</td>
-			<td colspan="" class="text-center noborder btm">@{{ item.obj[1001149] ? '[&#10004;]' : '[&nbsp;&nbsp;&nbsp;]' }} 9</td>
-			<td colspan="" class="text-center noborder btm">@{{ item.obj[1001150] ? '[&#10004;]' : '[&nbsp;&nbsp;&nbsp;]' }}10</td>
-			<td colspan="" class="text-center noborder btm">@{{ item.obj[1001151] ? '[&#10004;]' : '[&nbsp;&nbsp;&nbsp;]' }}11</td>
-			<td colspan="" class="text-center noborder btm">@{{ item.obj[1001152] ? '[&#10004;]' : '[&nbsp;&nbsp;&nbsp;]' }}12</td>
-			<td colspan="" class="text-center noborder blf btm">@{{ item.obj[1001153] ? '[&#10004;]' : '[&nbsp;&nbsp;&nbsp;]' }}Dis</td>
-			<td colspan="3" class="text-center noborder btm">@{{ item.obj[1001154] ? '[&#10004;]' : '[&nbsp;&nbsp;&nbsp;]' }}M - emp su</td>
-			<td colspan="" class="text-center noborder btm">@{{ item.obj[1001155] ? '[&#10004;]' : '[&nbsp;&nbsp;&nbsp;]' }}D</td>
+			<td colspan="2" class="noborder btm btp"></td>
+			<td class="noborder br btm btp" style="text-align: right;">@{{ item.obj[1001138] ? item.obj[1001138] : '' }} cc&nbsp;</td>
+			<td colspan="2" class="text-center noborder btm btp">@{{ item.obj[1001139] ? '[&#10004;]' : '[&nbsp;&nbsp;&nbsp;]' }} ASI</td>
+			<td colspan="2" class="noborder text-center btm btp">@{{ item.obj[1001140] ? '[&#10004;]' : '[&nbsp;&nbsp;&nbsp;]' }} F</td>
+			<td colspan="" class="text-center blf noborder btm btp">@{{ item.obj[1001141] ? '[&#10004;]' : '[&nbsp;&nbsp;&nbsp;]' }} 1</td>
+			<td colspan="" class="text-center noborder btm btp">@{{ item.obj[1001142] ? '[&#10004;]' : '[&nbsp;&nbsp;&nbsp;]' }} 2</td>
+			<td colspan="" class="text-center noborder btm btp">@{{ item.obj[1001143] ? '[&#10004;]' : '[&nbsp;&nbsp;&nbsp;]' }} 3</td>
+			<td colspan="" class="text-center noborder btm btp">@{{ item.obj[1001144] ? '[&#10004;]' : '[&nbsp;&nbsp;&nbsp;]' }} 4</td>
+			<td colspan="" class="text-center noborder btm btp">@{{ item.obj[1001145] ? '[&#10004;]' : '[&nbsp;&nbsp;&nbsp;]' }} 5</td>
+			<td colspan="" class="text-center noborder btm btp">@{{ item.obj[1001146] ? '[&#10004;]' : '[&nbsp;&nbsp;&nbsp;]' }} 6</td>
+			<td colspan="" class="text-center noborder btm btp">@{{ item.obj[1001147] ? '[&#10004;]' : '[&nbsp;&nbsp;&nbsp;]' }} 7</td>
+			<td colspan="" class="text-center noborder btm btp">@{{ item.obj[1001148] ? '[&#10004;]' : '[&nbsp;&nbsp;&nbsp;]' }} 8</td>
+			<td colspan="" class="text-center noborder btm btp">@{{ item.obj[1001149] ? '[&#10004;]' : '[&nbsp;&nbsp;&nbsp;]' }} 9</td>
+			<td colspan="" class="text-center noborder btm btp">@{{ item.obj[1001150] ? '[&#10004;]' : '[&nbsp;&nbsp;&nbsp;]' }}10</td>
+			<td colspan="" class="text-center noborder btm btp">@{{ item.obj[1001151] ? '[&#10004;]' : '[&nbsp;&nbsp;&nbsp;]' }}11</td>
+			<td colspan="" class="text-center noborder btm btp">@{{ item.obj[1001152] ? '[&#10004;]' : '[&nbsp;&nbsp;&nbsp;]' }}12</td>
+			<td colspan="" class="text-center noborder blf btm btp">@{{ item.obj[1001153] ? '[&#10004;]' : '[&nbsp;&nbsp;&nbsp;]' }}Dis</td>
+			<td colspan="3" class="text-center noborder btm btp">@{{ item.obj[1001154] ? '[&#10004;]' : '[&nbsp;&nbsp;&nbsp;]' }}M - emp su</td>
+			<td colspan="" class="text-center noborder btm btp">@{{ item.obj[1001155] ? '[&#10004;]' : '[&nbsp;&nbsp;&nbsp;]' }}D</td>
 			<td colspan="7" class="text-center">@{{ item.obj[1001156] ? item.obj[1001156] : '' }}</td>
 		</tr>
 		<tr>
@@ -615,28 +615,28 @@
 			<td colspan="3">&nbsp;@{{item.obj[1001253] | toDate | date:'dd MMMM yyyy'}}</td>
 			<td colspan="2">&nbsp;@{{ item.obj[1001254] ? item.obj[1001254] : '' }}</td>
 			<td colspan="3">&nbsp;@{{ item.obj[1001255] ? item.obj[1001255] : '' }}</td>
-			<td colspan="2" class="noborder btm">&nbsp;@{{ item.obj[1001256] ? item.obj[1001256] : '' }}</td>
-			<td colspan="2" class="noborder btm" style="text-align: right;">cc&nbsp;</td>
+			<td colspan="2" class="noborder btm btp">&nbsp;@{{ item.obj[1001256] ? item.obj[1001256] : '' }}</td>
+			<td colspan="2" class="noborder btm btp" style="text-align: right;">cc&nbsp;</td>
 			<td colspan="3">&nbsp;@{{ item.obj[1001257] ? item.obj[1001257] : '' }}</td>
-			<td colspan="2" class="noborder btm"></td>
-			<td class="noborder br btm" style="text-align: right;">@{{ item.obj[1001258] ? item.obj[1001258] : '' }} cc&nbsp;</td>
-			<td colspan="2" class="text-center noborder btm">@{{ item.obj[1001259] ? '[&#10004;]' : '[&nbsp;&nbsp;&nbsp;]' }} ASI</td>
-			<td colspan="2" class="noborder text-center btm">@{{ item.obj[1001260] ? '[&#10004;]' : '[&nbsp;&nbsp;&nbsp;]' }} F</td>
-			<td colspan="" class="text-center blf noborder btm">@{{ item.obj[1001261] ? '[&#10004;]' : '[&nbsp;&nbsp;&nbsp;]' }} 1</td>
-			<td colspan="" class="text-center noborder btm">@{{ item.obj[1001262] ? '[&#10004;]' : '[&nbsp;&nbsp;&nbsp;]' }} 2</td>
-			<td colspan="" class="text-center noborder btm">@{{ item.obj[1001263] ? '[&#10004;]' : '[&nbsp;&nbsp;&nbsp;]' }} 3</td>
-			<td colspan="" class="text-center noborder btm">@{{ item.obj[1001264] ? '[&#10004;]' : '[&nbsp;&nbsp;&nbsp;]' }} 4</td>
-			<td colspan="" class="text-center noborder btm">@{{ item.obj[1001265] ? '[&#10004;]' : '[&nbsp;&nbsp;&nbsp;]' }} 5</td>
-			<td colspan="" class="text-center noborder btm">@{{ item.obj[1001266] ? '[&#10004;]' : '[&nbsp;&nbsp;&nbsp;]' }} 6</td>
-			<td colspan="" class="text-center noborder btm">@{{ item.obj[1001267] ? '[&#10004;]' : '[&nbsp;&nbsp;&nbsp;]' }} 7</td>
-			<td colspan="" class="text-center noborder btm">@{{ item.obj[1001268] ? '[&#10004;]' : '[&nbsp;&nbsp;&nbsp;]' }} 8</td>
-			<td colspan="" class="text-center noborder btm">@{{ item.obj[1001269] ? '[&#10004;]' : '[&nbsp;&nbsp;&nbsp;]' }} 9</td>
-			<td colspan="" class="text-center noborder btm">@{{ item.obj[1001270] ? '[&#10004;]' : '[&nbsp;&nbsp;&nbsp;]' }}10</td>
-			<td colspan="" class="text-center noborder btm">@{{ item.obj[1001271] ? '[&#10004;]' : '[&nbsp;&nbsp;&nbsp;]' }}11</td>
-			<td colspan="" class="text-center noborder btm">@{{ item.obj[1001272] ? '[&#10004;]' : '[&nbsp;&nbsp;&nbsp;]' }}12</td>
-			<td colspan="" class="text-center noborder blf btm">@{{ item.obj[1001273] ? '[&#10004;]' : '[&nbsp;&nbsp;&nbsp;]' }}Dis</td>
-			<td colspan="3" class="text-center noborder btm">@{{ item.obj[1001274] ? '[&#10004;]' : '[&nbsp;&nbsp;&nbsp;]' }}M - emp su</td>
-			<td colspan="" class="text-center noborder btm">@{{ item.obj[1001275] ? '[&#10004;]' : '[&nbsp;&nbsp;&nbsp;]' }}D</td>
+			<td colspan="2" class="noborder btm btp"></td>
+			<td class="noborder br btm btp" style="text-align: right;">@{{ item.obj[1001258] ? item.obj[1001258] : '' }} cc&nbsp;</td>
+			<td colspan="2" class="text-center noborder btm btp">@{{ item.obj[1001259] ? '[&#10004;]' : '[&nbsp;&nbsp;&nbsp;]' }} ASI</td>
+			<td colspan="2" class="noborder text-center btm btp">@{{ item.obj[1001260] ? '[&#10004;]' : '[&nbsp;&nbsp;&nbsp;]' }} F</td>
+			<td colspan="" class="text-center blf noborder btm btp">@{{ item.obj[1001261] ? '[&#10004;]' : '[&nbsp;&nbsp;&nbsp;]' }} 1</td>
+			<td colspan="" class="text-center noborder btm btp">@{{ item.obj[1001262] ? '[&#10004;]' : '[&nbsp;&nbsp;&nbsp;]' }} 2</td>
+			<td colspan="" class="text-center noborder btm btp">@{{ item.obj[1001263] ? '[&#10004;]' : '[&nbsp;&nbsp;&nbsp;]' }} 3</td>
+			<td colspan="" class="text-center noborder btm btp">@{{ item.obj[1001264] ? '[&#10004;]' : '[&nbsp;&nbsp;&nbsp;]' }} 4</td>
+			<td colspan="" class="text-center noborder btm btp">@{{ item.obj[1001265] ? '[&#10004;]' : '[&nbsp;&nbsp;&nbsp;]' }} 5</td>
+			<td colspan="" class="text-center noborder btm btp">@{{ item.obj[1001266] ? '[&#10004;]' : '[&nbsp;&nbsp;&nbsp;]' }} 6</td>
+			<td colspan="" class="text-center noborder btm btp">@{{ item.obj[1001267] ? '[&#10004;]' : '[&nbsp;&nbsp;&nbsp;]' }} 7</td>
+			<td colspan="" class="text-center noborder btm btp">@{{ item.obj[1001268] ? '[&#10004;]' : '[&nbsp;&nbsp;&nbsp;]' }} 8</td>
+			<td colspan="" class="text-center noborder btm btp">@{{ item.obj[1001269] ? '[&#10004;]' : '[&nbsp;&nbsp;&nbsp;]' }} 9</td>
+			<td colspan="" class="text-center noborder btm btp">@{{ item.obj[1001270] ? '[&#10004;]' : '[&nbsp;&nbsp;&nbsp;]' }}10</td>
+			<td colspan="" class="text-center noborder btm btp">@{{ item.obj[1001271] ? '[&#10004;]' : '[&nbsp;&nbsp;&nbsp;]' }}11</td>
+			<td colspan="" class="text-center noborder btm btp">@{{ item.obj[1001272] ? '[&#10004;]' : '[&nbsp;&nbsp;&nbsp;]' }}12</td>
+			<td colspan="" class="text-center noborder blf btm btp">@{{ item.obj[1001273] ? '[&#10004;]' : '[&nbsp;&nbsp;&nbsp;]' }}Dis</td>
+			<td colspan="3" class="text-center noborder btm btp">@{{ item.obj[1001274] ? '[&#10004;]' : '[&nbsp;&nbsp;&nbsp;]' }}M - emp su</td>
+			<td colspan="" class="text-center noborder btm btp">@{{ item.obj[1001275] ? '[&#10004;]' : '[&nbsp;&nbsp;&nbsp;]' }}D</td>
 			<td colspan="7" class="text-center">@{{ item.obj[1001276] ? item.obj[1001276] : '' }}</td>
 		</tr>
 		<tr>

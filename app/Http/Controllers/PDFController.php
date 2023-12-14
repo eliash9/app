@@ -128,6 +128,15 @@ class PDFController extends Controller
                 'd9' => [(object)$d1],
                 'd10' => [(object)$d1],
                 'd11' => [(object)$d1],
+                'd12'=> [(object)$d1],
+                'd13' => [(object)$d1],
+                'd14' => [(object)$d1],
+                'd15' => [(object)$d1],
+                'd16' => [(object)$d1],
+                'd17' => [(object)$d1],
+                'd18' => [(object)$d1],
+                'd19' => [(object)$d1],
+                'd20' => [(object)$d1],
                 'profile' => (object) $profile,
                 'img'=>(object)$image
     

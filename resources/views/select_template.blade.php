@@ -10,7 +10,7 @@
 </head>
 
 <body >
-    <div class="py-4">
+    <div class="py-4 px-5">
         <h2>Select Template</h2>
     </div>
     <div class="bg-gray-100 flex items-center justify-center h-screen">

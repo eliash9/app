@@ -15,6 +15,7 @@ class FormController extends Controller
         foreach ($files as $file) {
             $viewFiles[] = pathinfo($file, PATHINFO_FILENAME);
         }
+        natsort($viewFiles);
         return view('select_template', ['files' => $viewFiles]);
 
     }
