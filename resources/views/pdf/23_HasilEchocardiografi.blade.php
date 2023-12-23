@@ -234,7 +234,7 @@
 
 <body ng-controller="cetakCardiografi">
     <section>
-        <table width="100%" id="content" style="table-layout:fixed">
+        <table width="100%" id="content" style="table-layout:fixed;">
             <tr style="border:none;border-top:1px solid #000">
                 <td rowspan="4" style="border:none;border-right:1px solid #000">
                     @if(stripos(\Request::url(), 'localhost') !== FALSE)
@@ -266,6 +266,8 @@
                 <td style="border:none;border-left:1px solid #000">NIK</td>
                 <td colspan="3" style="border:none">: {!! $res['d'][0]->noidentitas !!}</td>
             </tr>
+        </table>
+        <table>
             <tr>
                 <td colspan="9" class="bg-dark" style="font-size:x-large">
                     HASIL ECHOCARDIOGRAFI
