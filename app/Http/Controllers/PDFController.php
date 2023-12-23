@@ -92,10 +92,44 @@ class PDFController extends Controller
         ];
         $d1=[
             'nocm' => '043099',
+            'tglorder'=>'07-01-1988',
+            'noregistrasi'=>23523,
+            'pengorder'=>'',
+            'dokterpenanggungjawab'=>'',
+            'umur'=>55,
+            'ruanganperejuk'=>'ee',
+            'tgllahirs'=>'',
+            'tglakhir'=>'',
+            'alamatlengkap'=>'',
+            'kelompokpasien'=>'',
+            'namarekanan'=>'',
+            'catatan'=>'',
+            'produkfk'=>'',
+            'dokterperiksa'=>'',
+            'tat'=>'',
             'namapasien' => 'Aulia Suprapto',
             'jeniskelamin'=>'PEREMPUAN',
             'tgllahir'=>'07-01-1988',
-            'noidentitas'=>'6464646464646'
+            'noidentitas'=>'6464646464646',
+            'tanggal'=>'06-06-2023 13:24',
+            'nofoto'=>'5235',
+            'klinis'=>'post orif',
+            'statusrad'=>'Biasa',
+            'dokterpengirim'=>'dr. Sufandi Fahmi, Sp.OT',
+            'dokterluar'=>'SDGSD',
+            'dokterrad'=>'dr. Hj. Rakhmawati Tahir Lopa, M.Kes, Sp.Rad.,Subsp, Abd(K)',
+            'keterangan'=>'Foto Antebrachii Dextra AP/Lat<br><br>
+            - Plate and screws terpasang disertai discontinuitas 1/3 tengah os radiusulna<br>
+            - Tampak os radius bowing<br>
+            - Mineralisasi tulang berkurang, kasar dan porotik<br>
+            - Celah sendi baik<br>
+            - Soft tissue baik<br>
+            Kesan :<br>
+            - Plating disertai discontinuitas 1/3 tengah os radiusulna dextra (Dibanding foto tanggal 26-04-2023, stqa)<br>
+            - Osteoporosis',
+            'pgid'=>1012282,
+
+
 
         ];
 
@@ -111,8 +145,14 @@ class PDFController extends Controller
             'image'=>'img/hiperbilirubin.png'
         ];
 
-        $data = [
+        
 
+        $data = [
+            'raw'=>[(object)$d1,(object)$d1],
+            'profile' => (object) $profile,
+            'cek'=>(object)$d1,
+            'aa'=>[],
+            'r'=>['strIdPegawai'=>445646],
             'title' => 'judul',
             'namars' => 'RSUD H.A. Sulthan Daeng Radja Bulukumba',
             'res' => [
@@ -138,7 +178,8 @@ class PDFController extends Controller
                 'd19' => [(object)$d1],
                 'd20' => [(object)$d1],
                 'profile' => (object) $profile,
-                'img'=>(object)$image
+                'img'=>(object)$image,
+               
     
             ]
         ];
