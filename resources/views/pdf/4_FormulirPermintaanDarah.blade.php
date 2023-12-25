@@ -8,18 +8,12 @@
 	<title>Formulir Permintaan Darah</title>
 
 	<style>
-		* {
-			padding: 0;
-			margin: 0;
-			box-sizing: border-box;
-			font-family: DejaVu Sans, Verdana, Arial, sans-serif;
-		}
-
 		body,
 		html {
-			font-family: Arial, Helvetica, sans-serif;
+			font-family: DejaVu Sans, Verdana, Arial, sans-serif;
 			font-size: 6pt;
 			margin: 10px 20px;
+			box-sizing: border-box;
 		}
 
 		@page {
@@ -38,7 +32,7 @@
 
 		tr {
 			page-break-inside: avoid;
-			page-break-after: auto
+			page-break-before: auto
 		}
 
 		td,
@@ -126,6 +120,7 @@
 			<td style="text-align:center;font-size:36px">126</td>
 		</tr>
 	</table>
+
 	<table>
 
 		<tr>
@@ -335,14 +330,15 @@
 					</tr>
 
 					<tr>
-						<td width="75px">PLASMA *)</td>
-						<td>@{{ item.obj[31101285] ? '[&#10004;]' : '[&nbsp;&nbsp;&nbsp;]' }} Plasma biasa</td>
+						<td>PLASMA *)</td>
+						<td colspan="5">@{{ item.obj[31101285] ? '[&#10004;]' : '[&nbsp;&nbsp;&nbsp;]' }} Plasma biasa
+						</td>
 						<td>: @{{ item.obj[31101286] ? item.obj[31101286] : '................................'
 							}} cc</td>
 					</tr>
 					<tr>
 						<td></td>
-						<td>@{{ item.obj[31101287] ? '[&#10004;]' : '[&nbsp;&nbsp;&nbsp;]' }} Fresh frozen
+						<td colspan="5">@{{ item.obj[31101287] ? '[&#10004;]' : '[&nbsp;&nbsp;&nbsp;]' }} Fresh frozen
 							plasma (FFP)</td>
 						<td>: @{{ item.obj[31101288] ? item.obj[31101288] : '................................'
 							}} cc</td>
@@ -353,7 +349,7 @@
 					</tr>
 
 					<tr>
-						<td>@{{ item.obj[31101289] ? '[&#10004;]' : '[&nbsp;&nbsp;&nbsp;]' }} Thrombocyt
+						<td colspan="4">@{{ item.obj[31101289] ? '[&#10004;]' : '[&nbsp;&nbsp;&nbsp;]' }} Thrombocyt
 							concentrate (TC)</td>
 						<td>:</td>
 						<td>@{{ item.obj[31101290] ? item.obj[31101290] : '................................' }}
@@ -361,7 +357,8 @@
 						<td>kantong</td>
 					</tr>
 					<tr>
-						<td>@{{ item.obj[31101291] ? '[&#10004;]' : '[&nbsp;&nbsp;&nbsp;]' }} Cryoprecipitate
+						<td colspan="4">@{{ item.obj[31101291] ? '[&#10004;]' : '[&nbsp;&nbsp;&nbsp;]' }}
+							Cryoprecipitate
 							AHF</td>
 						<td>:</td>
 						<td>@{{ item.obj[31101292] ? item.obj[31101292] : '................................' }}
@@ -369,7 +366,7 @@
 						<td>kantong</td>
 					</tr>
 					<tr>
-						<td>@{{ item.obj[31101293] ? '[&#10004;]' : '[&nbsp;&nbsp;&nbsp;]' }}
+						<td colspan="4">@{{ item.obj[31101293] ? '[&#10004;]' : '[&nbsp;&nbsp;&nbsp;]' }}
 							Buffycoat-granulocyt concentrate</td>
 						<td>:</td>
 						<td>@{{ item.obj[31101294] ? item.obj[31101294] : '................................' }}
@@ -377,36 +374,38 @@
 						<td>kantong</td>
 					</tr>
 					<tr>
-						<td>@{{ item.obj[31101295] ? '[&#10004;]' : '[&nbsp;&nbsp;&nbsp;]' }} Lain-lain</td>
+						<td colspan="4">@{{ item.obj[31101295] ? '[&#10004;]' : '[&nbsp;&nbsp;&nbsp;]' }} Lain-lain</td>
 						<td>:</td>
 						<td colspan="2">@{{ item.obj[31101296] ? item.obj[31101296] :
 							'................................' }}</td>
 					</tr>
 
 					<tr class="text-center">
-						<td>Nama dan tanda tangan petugas</td>
-						<td width="40px"></td>
-						<td>Nama dan tanda tangan Dokter</td>
-					</tr>
-					<tr class="text-center" style="border-bottom:1px solid #000">
-						<td>Yang mengambil contoh darah O.S</td>
+						<td colspan="3" class="text-center">Nama dan tanda tangan petugas</td>
 						<td></td>
-						<td>Yang meminta darah dan cap rumah sakit</td>
+						<td colspan="3">Nama dan tanda tangan Dokter</td>
 					</tr>
-					<tr class="text-center" style="border-bottom:1px solid #000">
-						<td>
+					<tr class="text-center">
+						<td colspan="3">Yang mengambil contoh darah O.S</td>
+						<td></td>
+						<td colspan="3">Yang meminta darah dan cap rumah sakit</td>
+					</tr>
+					<tr class="text-center">
+						<td colspan="3">
 							<div id="qrcodep1" style="text-align: center"></div>
 						</td>
 						<td></td>
-						<td>
+						<td colspan="3">
 							<div id="qrcodepp1" style="text-align: center"></div>
 						</td>
 					</tr>
-					<tr class="text-center" style="border-bottom:1px solid #000">
-						<td>@{{ item.obj[31101297] ? item.obj[31101297] : '................................' }}
+					<tr class="text-center">
+						<td colspan="3">@{{ item.obj[31101297] ? item.obj[31101297] : '................................'
+							}}
 						</td>
 						<td></td>
-						<td>@{{ item.obj[31101298] ? item.obj[31101298] : '................................' }}
+						<td colspan="3">@{{ item.obj[31101298] ? item.obj[31101298] : '................................'
+							}}
 						</td>
 					</tr>
 				</table>
@@ -414,90 +413,90 @@
 		</tr>
 	</table>
 
-	<table >
-		
-			<tr>
-				<td colspan="5">DIISI OLEH PETUGAS UTD
-					...........................................</td>
-				<td colspan="3" rowspan="3">
-					<table class="bordered" style="font-size:5pt;width:100%">
-						<tr class="bordered">
-							<td rowspan="2" height="46px" class="bordered text-center">Hasil Cross *)</td>
-							<td colspan="3" class="bordered" width="115px">ATD/PTTD Pemeriksa</td>
-						</tr>
-						<tr class="bordered text-center" style="height:16px">
-							<td class="bordered">Nama</td>
-							<td class="bordered">Tanggal</td>
-							<td class="bordered">Jam</td>
-						</tr>
-						<tr class="bordered" style="height:16px">
-							<td class="bordered" width="230px">@{{ item.obji20[31101305] ? item.obji20[31101305] : '' }}
-							</td>
-							<td class="bordered">@{{ item.obji20[31101306] ? item.obji20[31101306] : '' }}</td>
-							<td class="bordered">@{{item.obji20[31101307] | toDate | date:'dd MMMM yyyy'}}</td>
-							<td class="bordered">@{{item.obji20[31101307] | toDate | date:'HH:mm'}}</td>
-						</tr>
-						<tr class="bordered" style="height:16px">
-							<td class="bordered">@{{ item.obji20[31101308] ? item.obji20[31101308] : '' }}</td>
-							<td class="bordered">@{{ item.obji20[31101309] ? item.obji20[31101309] : '' }}</td>
-							<td class="bordered">@{{item.obji20[31101310] | toDate | date:'dd MMMM yyyy'}}</td>
-							<td class="bordered">@{{item.obji20[31101310] | toDate | date:'HH:mm'}}</td>
-						</tr>
-						<tr class="bordered">
-							<td class="bordered">@{{ item.obji20[31101311] ? item.obji20[31101311] : '' }}</td>
-							<td class="bordered">@{{ item.obji20[31101312] ? item.obji20[31101312] : '' }}</td>
-							<td class="bordered">@{{item.obji20[31101313] | toDate | date:'dd MMMM yyyy'}}</td>
-							<td class="bordered">@{{item.obji20[31101313] | toDate | date:'HH:mm'}}</td>
-						</tr>
-					</table>
-				</td>
-			</tr>
-			<tr style="border:none;">
-				<td colspan="3" rowspan="2" >
-					<table class="no-border-table" style="border:none;font-size: font-size:5pt;">
+	<table>
 
-						<tr>
-							<td>Contoh darah O.S</td>
-							
-							<td>:@{{ item.obji20[31101299] ? item.obji20[31101299] : '................................'
-								}}</td>
-						</tr>
-						<tr>
-							<td style="border:none;">Diterima tanggal</td>
-							
-							<td>:@{{item.obji20[31101300] | toDate | date:'dd MMMM yyyy'}}</td>
-						</tr>
-						<tr>
-							<td>Jam</td>
-							
-							<td>:@{{item.obji20[31101300] | toDate | date:'HH:mm'}} WITA</td>
-						</tr>
-						<tr>
-							<td>ATD/PTTD Penerima</td>
-							
-							<td>:@{{ item.obji20[31101301] ? item.obji20[31101301] : '................................'
-								}}</td>
-						</tr>
-					</table>
-				</td>
-				<td colspan="2" rowspan="2">
-					<table class="bordered" width:'100%'>
-						<tr class="bordered">
-							<td class="bordered">ABO</td>
-							<td class="bordered">RHESUS</td>
-							<td class="bordered">LAIN</td>
-						</tr>
-						<tr class="bordered">
-							<td height="45" class="bordered">@{{ item.obji20[31101302] ? item.obji20[31101302] : '' }}
-							</td>
-							<td class="bordered">@{{ item.obji20[31101303] ? item.obji20[31101303] : '' }}</td>
-							<td class="bordered">@{{ item.obji20[31101304] ? item.obji20[31101304] : '' }}</td>
-						</tr>
-					</table>
-				</td>
-			</tr>
+		<tr>
+			<td colspan="5">DIISI OLEH PETUGAS UTD
+				...........................................</td>
+			<td colspan="3" rowspan="3">
+				<table class="bordered" style="font-size:5pt;width:100%">
+					<tr class="bordered">
+						<td rowspan="2" height="46px" class="bordered text-center">Hasil Cross *)</td>
+						<td colspan="3" class="bordered" width="115px">ATD/PTTD Pemeriksa</td>
+					</tr>
+					<tr class="bordered text-center" style="height:16px">
+						<td class="bordered">Nama</td>
+						<td class="bordered">Tanggal</td>
+						<td class="bordered">Jam</td>
+					</tr>
+					<tr class="bordered" style="height:16px">
+						<td class="bordered" width="230px">@{{ item.obji20[31101305] ? item.obji20[31101305] : '' }}
+						</td>
+						<td class="bordered">@{{ item.obji20[31101306] ? item.obji20[31101306] : '' }}</td>
+						<td class="bordered">@{{item.obji20[31101307] | toDate | date:'dd MMMM yyyy'}}</td>
+						<td class="bordered">@{{item.obji20[31101307] | toDate | date:'HH:mm'}}</td>
+					</tr>
+					<tr class="bordered" style="height:16px">
+						<td class="bordered">@{{ item.obji20[31101308] ? item.obji20[31101308] : '' }}</td>
+						<td class="bordered">@{{ item.obji20[31101309] ? item.obji20[31101309] : '' }}</td>
+						<td class="bordered">@{{item.obji20[31101310] | toDate | date:'dd MMMM yyyy'}}</td>
+						<td class="bordered">@{{item.obji20[31101310] | toDate | date:'HH:mm'}}</td>
+					</tr>
+					<tr class="bordered">
+						<td class="bordered">@{{ item.obji20[31101311] ? item.obji20[31101311] : '' }}</td>
+						<td class="bordered">@{{ item.obji20[31101312] ? item.obji20[31101312] : '' }}</td>
+						<td class="bordered">@{{item.obji20[31101313] | toDate | date:'dd MMMM yyyy'}}</td>
+						<td class="bordered">@{{item.obji20[31101313] | toDate | date:'HH:mm'}}</td>
+					</tr>
+				</table>
+			</td>
+		</tr>
+		<tr style="border:none;">
+			<td colspan="3" rowspan="2">
+				<table class="no-border-table" style="border:none;font-size: font-size:5pt;">
 
-		
+					<tr>
+						<td>Contoh darah O.S</td>
+
+						<td>:@{{ item.obji20[31101299] ? item.obji20[31101299] : '................................'
+							}}</td>
+					</tr>
+					<tr>
+						<td style="border:none;">Diterima tanggal</td>
+
+						<td>:@{{item.obji20[31101300] | toDate | date:'dd MMMM yyyy'}}</td>
+					</tr>
+					<tr>
+						<td>Jam</td>
+
+						<td>:@{{item.obji20[31101300] | toDate | date:'HH:mm'}} WITA</td>
+					</tr>
+					<tr>
+						<td>ATD/PTTD Penerima</td>
+
+						<td>:@{{ item.obji20[31101301] ? item.obji20[31101301] : '................................'
+							}}</td>
+					</tr>
+				</table>
+			</td>
+			<td colspan="2" rowspan="2">
+				<table class="bordered" width:'100%'>
+					<tr class="bordered">
+						<td class="bordered">ABO</td>
+						<td class="bordered">RHESUS</td>
+						<td class="bordered">LAIN</td>
+					</tr>
+					<tr class="bordered">
+						<td height="45" class="bordered">@{{ item.obji20[31101302] ? item.obji20[31101302] : '' }}
+						</td>
+						<td class="bordered">@{{ item.obji20[31101303] ? item.obji20[31101303] : '' }}</td>
+						<td class="bordered">@{{ item.obji20[31101304] ? item.obji20[31101304] : '' }}</td>
+					</tr>
+				</table>
+			</td>
+		</tr>
+
+
 
 	</table>
 
