@@ -128,6 +128,7 @@ class PDFController extends Controller
             - Plating disertai discontinuitas 1/3 tengah os radiusulna dextra (Dibanding foto tanggal 26-04-2023, stqa)<br>
             - Osteoporosis',
             'pgid'=>1012282,
+            'emrdfk'=>'',
 
 
 
@@ -145,9 +146,13 @@ class PDFController extends Controller
             'image'=>'img/hiperbilirubin.png'
         ];
 
+        $item=[];
+
         
 
         $data = [
+            
+            'image'=>public_path('img/logo_only.png'),
             'raw'=>[(object)$d1,(object)$d1],
             'profile' => (object) $profile,
             'cek'=>(object)$d1,
@@ -179,6 +184,7 @@ class PDFController extends Controller
                 'd20' => [(object)$d1],
                 'profile' => (object) $profile,
                 'img'=>(object)$image,
+                
                
     
             ]
