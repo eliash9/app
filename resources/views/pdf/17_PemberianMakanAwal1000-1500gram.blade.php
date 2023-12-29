@@ -25,7 +25,7 @@
 			border-collapse: collapse;
 
 			width: 100%;
-			
+
 		}
 
 		tr {
@@ -140,7 +140,7 @@
 
 <body>
 	<table width='100%'>
-		<tr  class="noborder">
+		<tr class="noborder">
 			<td colspan="8" rowspan="4" class="p3 noborder-tb text-center">
 				<center><img src="{{ $image }}" alt="" style="height: 70px; width:60px;"></center>
 			</td>
@@ -195,7 +195,7 @@
 			<td colspan="5">TOTAL VOLUME CAIRAN</td>
 			<td colspan="26" rowspan="11">
 				<table class="noborder" style="table-layout:fixed;text-align:left;width:100%">
-					<tr class="noborder text-center">
+
 					<tr class="noborder">
 						<td valign="top" class="noborder text-center" colspan="2">-</td>
 						<td valign="top" class="noborder" colspan="24" align="left">'Volume minum' merupakan jumlah
