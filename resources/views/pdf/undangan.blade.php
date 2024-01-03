@@ -40,28 +40,15 @@
         @foreach ($undangan as $item)
         <div style="float: left; width: 33%;">
             <table width="100%">
+            @foreach ($item as $key => $value)
+                <tr>
+                    <td width="30%" >{{ strtoupper($key) }}</td>
+                    <td width="2%" >:</td>
+                    <td >{{ strtoupper($value) }}</td>
+                </tr>
+                @endforeach
 
-                <tr>
-                    <td width="30%">MR</td>
-                    <td width="2%">:</td>
-                    <td> {{ $item->mr }} {{ $no++ }}</td>
-                </tr>
-                <tr>
-                    <td>NAMA</td>
-                    <td>:</td>
-                    <td> {{ $item->nama }}</td>
-                </tr>
-                <tr>
-                    <td>TTL</td>
-                    <td>:</td>
-                    <td> {{ $item->ttl }}</td>
-                </tr>
-                <tr>
-                    <td>NIK</td>
-                    <td>:</td>
-                    <td> {{ $item->nik }}</td>
-                </tr>
-
+              
             </table>
         </div>
 
@@ -74,6 +61,8 @@
 
         @endforeach
     </div>
+
+
 
 </body>
 

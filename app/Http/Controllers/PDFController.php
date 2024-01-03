@@ -98,6 +98,64 @@ class PDFController extends Controller
 
         ];
 
+        $undangan3 = [
+            [
+                'MR' => 'MR 1',
+                'NAMA' => 'NAdamsaf',
+                'TTL' => '23-33-1234',
+                'NIK' => '32352352352',
+            ],
+            [
+                'MR' => 'MR 2',
+                'NAMA' => 'John Doe',
+                'TTL' => '12-21-1980',
+                'NIK' => '987654321',
+            ],
+            [
+                'MR' => 'MR 3',
+                'NAMA' => 'Jane Smith',
+                'TTL' => '05-15-1995',
+                'NIK' => '123456789',
+            ],
+            [
+                'MR' => 'MR 1',
+                'NAMA' => 'NAdamsaf',
+                'TTL' => '23-33-1234',
+                'NIK' => '32352352352',
+            ],
+            [
+                'MR' => 'MR 2',
+                'NAMA' => 'John Doe',
+                'TTL' => '12-21-1980',
+                'NIK' => '987654321',
+            ],
+            [
+                'MR' => 'MR 3',
+                'NAMA' => 'Jane Smith',
+                'TTL' => '05-15-1995',
+                'NIK' => '123456789',
+            ],
+            [
+                'MR' => 'MR 1',
+                'NAMA' => 'NAdamsaf',
+                'TTL' => '23-33-1234',
+                'NIK' => '32352352352',
+            ],
+            [
+                'MR' => 'MR 2',
+                'NAMA' => 'John Doe',
+                'TTL' => '12-21-1980',
+                'NIK' => '987654321',
+            ],
+            [
+                'MR' => 'MR 3',
+                'NAMA' => 'Jane Smith',
+                'TTL' => '05-15-1995',
+                'NIK' => '123456789',
+            ],
+            // Add more items as needed
+        ];
+
 
         $profile = [
             'namalengkap' => 'RSUD H.A SULTHAN DAENG RADJA BULUKUMBA',
@@ -172,7 +230,7 @@ class PDFController extends Controller
             'profile' => (object) $profile,
             'cek'=>(object)$d1,
             'aa'=>[],
-            'undangan'=>[(object)$undangan,(object)$undangan2,(object)$undangan,(object)$undangan2,(object)$undangan],
+            'undangan'=>$undangan3,
             'r'=>['strIdPegawai'=>445646],
             'title' => 'judul',
             'namars' => 'RSUD H.A. Sulthan Daeng Radja Bulukumba',
