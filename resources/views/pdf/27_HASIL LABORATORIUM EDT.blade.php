@@ -5,57 +5,22 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>HASIL LABORATORIUM EDT</title>
-    @if (stripos(\Request::url(), 'localhost') !== false)
-        <script src="{{ asset('js/jquery.min.js') }}"></script>
-        <script src="{{ asset('js/jquery.qr-code.js') }}"></script>
-        <script type="text/javascript" src="{{ asset('js/qrcode/src/jquery.qrcode.js') }}"></script>
-        <script type="text/javascript" src="{{ asset('js/qrcode/src/qrcode.js') }}"></script>
-        <!-- angular -->
-        <script src="{{ asset('js/angular/angular.min.js') }}" type="text/javascript"></script>
-        <script src="{{ asset('js/angular/angular-route.min.js') }}" type="text/javascript"></script>
-        <script type="text/javascript" src="{{ asset('js/angular/angular-animate.min.js') }}"></script>
-        <script type="text/javascript" src="{{ asset('js/angular/angular-aria.min.js') }}"></script>
-        <script src="{{ asset('js/angular/angular-material.js') }}" type="text/javascript"></script>
-    @else
-        <script src="{{ asset('service/js/jquery.min.js') }}"></script>
-        <script src="{{ asset('service/js/jquery.qr-code.js') }}"></script>
-        <script type="text/javascript" src="{{ asset('js/qrcode/src/jquery.qrcode.js') }}"></script>
-        <script type="text/javascript" src="{{ asset('js/qrcode/src/qrcode.js') }}"></script>
-        <!-- angular -->
-        <script src="{{ asset('service/js/angular/angular.min.js') }}" type="text/javascript"></script>
-        <script src="{{ asset('service/js/angular/angular-route.min.js') }}" type="text/javascript"></script>
-        <script type="text/javascript" src="{{ asset('service/js/angular/angular-animate.min.js') }}"></script>
-        <script type="text/javascript" src="{{ asset('service/js/angular/angular-aria.min.js') }}"></script>
-        <script src="{{ asset('service/js/angular/angular-material.js') }}" type="text/javascript"></script>
-    @endif
+  
     <style>
-        *{
-            padding:0;
-            margin:0;
-            box-sizing:border-box;
-        }
-        body{
-            width:210mm;
-            height:297mm;
-            margin-top:250mm;
-            margin-bottom:250mm;
-            margin-left:250mm;
-            margin-right:250mm;
-            margin:0 auto; 
+         html,
+        body {
+            margin-top: 20px;
+            margin-left: 30px;
+            font-family: DejaVu Sans, Arial, Helvetica, sans-serif;
+            box-sizing: border-box;
+            font-size: 9pt;
         }
         @page{
-            size: A4;
+
+            size:A4;
+          
         }
-        table{ 
-            page-break-inside:auto 
-        }
-		table {
-            -fs-table-paginate: paginate;
-        }
-        tr{ 
-            page-break-inside:avoid; 
-            page-break-after:auto 
-        }
+       
         table{
             border:1px solid #000;
             border-collapse:collapse;
@@ -196,13 +161,13 @@
                 <td colspan="12" class="noborder p3">Nama Lengkap</td>
                 <td class="noborder" colspan="20">: {{ $item->namapasien }}</td>
                 <td colspan="2" class="noborder"></td>
-                <td colspan="2" class="noborder">{!!  $item->jeniskelamin == 'PEREMPUAN' ? '(P)' : '(L)'  !!}</td>
+                <td colspan="5" class="noborder">{!!  $item->jeniskelamin == 'PEREMPUAN' ? '(P)' : '(L)'  !!}</td>
             </tr>
             <tr class="noborder">
                 <td colspan="29" rowspan="2" class="text-center p3"><strong>HASIL PEMERIKSAAN LABORATORIUM KLINIK (Yang diminta harap diberi tanda)</strong></td>
                 <td colspan="12" class="noborder p3">Tanggal Lahir</td>
                 <td colspan="20" class="noborder p3">: {!! date('d-m-Y',strtotime( $item->tgllahir  )) !!}</td>
-                <td colspan="w" class="noborder p3"></td>
+                <td colspan="7" class="noborder p3"></td>
             </tr>
             <tr class="noborder btm">
                 <td colspan="39" class="noborder p3">(Mohon diisi atau ditempelkan stiker jika ada)</td>
@@ -217,14 +182,14 @@
                 <td colspan="15" class="p3 noborder btm">Tgl/Jam Pemeriksaan</td>
                 <td colspan="14" class="p3 noborder btm">: {!! date('d-m-Y H:m',strtotime( $item->tgljawab  )) !!}</td>
                 <td colspan="9" class="p3 noborder blf btm" rowspan="2">Status</td>
-                <td colspan="10" class="p3 noborder" rowspan="2">: {{ $item->kelompokpasien }}</td>
+                <td colspan="30" class="p3 noborder" rowspan="2">: {{ $item->kelompokpasien }}</td>
             </tr>
             <tr>
                 <td colspan="15" class="p3 noborder">Penanggung Jawab</td>
                 <td colspan="14" class="p3 noborder" style="font-size:9pt">: {{ $item->namapenanggungjawab }}</td>
             </tr>
-            <tr style="height:70pt">
-                <td colspan="68" class="text-center p3"><u><b>EVALUASI DARAH TEPI</b></u></td>
+            <tr >
+                <td style="height:70pt" colspan="68" class="text-center p3"><u><b>EVALUASI DARAH TEPI</b></u></td>
             </tr>
             <tr style="height: 40pt;">
                 <td colspan="5" class="noborder"></td>
@@ -234,22 +199,22 @@
             <tr class="-P3">
                 <td colspan="5" class="noborder"></td>
                 <td colspan="12" class="noborder">HAEMOGLOBIN</td>
-                <td colspan="41" class="noborder">: {{ $item->haemoglobin }} gr%</td>\
+                <td colspan="51" class="noborder">: {{ $item->haemoglobin }} gr%</td>\
             </tr>
             <tr class="p3">
                 <td colspan="5" class="noborder"></td>
                 <td colspan="12" class="noborder">LEUKOSIT</td>
-                <td colspan="41" class="noborder">: {{ $item->leukosit }} x 10<sup>3</sup>/mm <sup>3</sup></td>
+                <td colspan="51" class="noborder">: {{ $item->leukosit }} x 10<sup>3</sup>/mm <sup>3</sup></td>
             </tr>
             <tr class="p3">
                 <td colspan="5" class="noborder"></td>
                 <td colspan="12" class="noborder">ERITROSIT</td>
-                <td colspan="41" class="noborder">: {{ $item->eritrosit }} x 10<sup>4</sup>/mm <sup>3</sup></td>
+                <td colspan="51" class="noborder">: {{ $item->eritrosit }} x 10<sup>4</sup>/mm <sup>3</sup></td>
             </tr>
             <tr class="p3">
                 <td colspan="5" class="noborder"></td>
                 <td colspan="12" class="noborder">TROMBOSIT</td>
-                <td colspan="41" class="noborder">: {{ $item->trombosit }} x 10<sup>3</sup>/mm <sup>3</sup></td>
+                <td colspan="51" class="noborder">: {{ $item->trombosit }} x 10<sup>3</sup>/mm <sup>3</sup></td>
             </tr>
             <tr class="p3" style="height: 20pt;">
                 <td colspan="5" class="noborder"></td>
@@ -328,23 +293,7 @@
     </div>
 
     
-</body>
-<script>
-    var d1 = {!! json_encode($item->namadokterpemeriksa )!!}
-        
-        if(d1 != undefined){
-            jQuery('#qrcoded1{{ $item->dokterpemeriksa }}').qrcode({
-                width	: 100,
-                height	: 100,
-                text	: "Tanda Tangan Digital Oleh " + d1
-            });	
-        }
-    
-</script>
 @endforeach
-<script>
-        $(document).ready(function () {
-        window.print();
-    });
-</script>
+</body>
+
 </html>

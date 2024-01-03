@@ -202,6 +202,21 @@ class PDFController extends Controller
             - Osteoporosis',
             'pgid'=>1012282,
             'emrdfk'=>'',
+            'namadokterpengirim'=>'dr. Hj. Jusniati, Sp.PK',
+            'tgljawab'=>'',
+            'namapenanggungjawab'=>'',
+            'haemoglobin'=>'',
+            'leukosit'=>'',
+            'eritrosit'=>'',
+            'trombosit'=>'',
+            'keteritrosit'=>'',
+            'ketleukosit'=>'',
+            'kettrombosit'=>'',
+            'kesimpulan'=>'',
+            'rasio'=>'',
+            'dokterpemeriksa'=>'',
+            'namadokterpemeriksa'=>'',
+
 
 
 
