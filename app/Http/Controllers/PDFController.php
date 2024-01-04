@@ -84,10 +84,10 @@ class PDFController extends Controller
         ];
 
         $undangan = [
-            'mr'=>'MR',
-            'nama'=>'NAdamsaf',
-            'ttl'=>'23-33-1234',
-            'nik'=>'32352352352'
+                'MR' => 'MR 2',
+                'NAMA' => 'John Doe',
+                'TTL' => '12-21-1980',
+                'NIK' => '987654321',
 
         ];
         $undangan2 = [
@@ -264,7 +264,7 @@ class PDFController extends Controller
             'profile' => (object) $profile,
             'cek'=>(object)$d1,
             'aa'=>[],
-            'undangan'=>$undangan3,
+            'undangan'=>[(object)$undangan],
             'r'=>['strIdPegawai'=>445646],
             'title' => 'judul',
             'namars' => 'RSUD H.A. Sulthan Daeng Radja Bulukumba',

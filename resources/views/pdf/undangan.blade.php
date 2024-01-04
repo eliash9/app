@@ -11,7 +11,8 @@
         }
 
         @page {
-            size: auto;
+          
+             size: 16cm 20cm landscape; 
         }
 
         table {
@@ -34,32 +35,52 @@
     @php
     $no = 1;
     $count = 0;
+    $jumlah = 12;
     @endphp
 
     <div>
+    @for ($i = 0; $i < $jumlah; $i++)
         @foreach ($undangan as $item)
+       
         <div style="float: left; width: 33%;">
             <table width="100%">
-            @foreach ($item as $key => $value)
+           
                 <tr>
-                    <td width="30%" >{{ strtoupper($key) }}</td>
+                    <td width="30%" >MR</td>
                     <td width="2%" >:</td>
-                    <td >{{ strtoupper($value) }}</td>
+                    <td >{{ $item->MR }}</td>
                 </tr>
-                @endforeach
+                <tr>
+                    <td width="30%" >NAMA</td>
+                    <td width="2%" >:</td>
+                    <td >{{ $item->NAMA }}</td>
+                </tr>
+                <tr>
+                    <td width="30%" >TTL</td>
+                    <td width="2%" >:</td>
+                    <td >{{ $item->TTL }}</td>
+                </tr>
+                <tr>
+                    <td width="30%" >TTL</td>
+                    <td width="2%" >:</td>
+                    <td >{{ $item->NIK }}</td>
+                </tr>
+           
 
               
             </table>
         </div>
+      
 
         @php
         $count++;
         if ($count % 3 == 0) {
-            echo '<div style="clear:both; padding:25;"></div>'; 
+            echo '<div style="clear:both; padding:10;"></div>'; 
         }
         @endphp
 
         @endforeach
+        @endfor
     </div>
 
 
