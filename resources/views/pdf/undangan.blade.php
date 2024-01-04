@@ -11,22 +11,11 @@
         }
 
         @page {
-          
-             size: 16cm 20cm landscape; 
+
+            size: 16cm 20cm landscape;
         }
 
-        table {
-           
-        }
-
-        tfoot tr td {
-            font-weight: bold;
-           
-        }
-
-        .gray {
-            background-color: lightgray
-        }
+       
     </style>
 </head>
 
@@ -39,48 +28,45 @@
     @endphp
 
     <div>
-    @for ($i = 0; $i < $jumlah; $i++)
-        @foreach ($undangan as $item)
-       
-        <div style="float: left; width: 33%;">
+        @for ($i = 0; $i < $jumlah; $i++) @foreach ($undangan as $item) <div style="float: left; width: 33%;">
             <table width="100%">
-           
-                <tr>
-                    <td width="30%" >MR</td>
-                    <td width="2%" >:</td>
-                    <td >{{ $item->MR }}</td>
-                </tr>
-                <tr>
-                    <td width="30%" >NAMA</td>
-                    <td width="2%" >:</td>
-                    <td >{{ $item->NAMA }}</td>
-                </tr>
-                <tr>
-                    <td width="30%" >TTL</td>
-                    <td width="2%" >:</td>
-                    <td >{{ $item->TTL }}</td>
-                </tr>
-                <tr>
-                    <td width="30%" >TTL</td>
-                    <td width="2%" >:</td>
-                    <td >{{ $item->NIK }}</td>
-                </tr>
-           
 
-              
+                <tr>
+                    <td width="30%">MR</td>
+                    <td width="2%">:</td>
+                    <td>{{ $item->MR }}</td>
+                </tr>
+                <tr>
+                    <td width="30%">NAMA</td>
+                    <td width="2%">:</td>
+                    <td>{{ $item->NAMA }}</td>
+                </tr>
+                <tr>
+                    <td width="30%">TTL</td>
+                    <td width="2%">:</td>
+                    <td>{{ $item->TTL }}</td>
+                </tr>
+                <tr>
+                    <td width="30%">TTL</td>
+                    <td width="2%">:</td>
+                    <td>{{ $item->NIK }}</td>
+                </tr>
+
+
+
             </table>
-        </div>
-      
+    </div>
 
-        @php
-        $count++;
-        if ($count % 3 == 0) {
-            echo '<div style="clear:both; padding:10;"></div>'; 
-        }
-        @endphp
 
-        @endforeach
-        @endfor
+    @php
+    $count++;
+    if ($count % 3 == 0) {
+    echo '<div style="clear:both; padding:10;"></div>';
+    }
+    @endphp
+
+    @endforeach
+    @endfor
     </div>
 
 
