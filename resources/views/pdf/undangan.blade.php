@@ -11,16 +11,16 @@
         }
 
         @page {
-            size: A4 portrait;
+            size: auto;
         }
 
         table {
-            font-size: x-small;
+           
         }
 
         tfoot tr td {
             font-weight: bold;
-            font-size: x-small;
+           
         }
 
         .gray {
@@ -55,7 +55,7 @@
         @php
         $count++;
         if ($count % 3 == 0) {
-            echo '<div style="clear:both; margin-top:40px;"></div>'; 
+            echo '<div style="clear:both; padding:25;"></div>'; 
         }
         @endphp
 

@@ -153,6 +153,25 @@ class PDFController extends Controller
                 'TTL' => '05-15-1995',
                 'NIK' => '123456789',
             ],
+            
+            [
+                'MR' => 'MR 1',
+                'NAMA' => 'NAdamsaf',
+                'TTL' => '23-33-1234',
+                'NIK' => '32352352352',
+            ],
+            [
+                'MR' => 'MR 2',
+                'NAMA' => 'John Doe',
+                'TTL' => '12-21-1980',
+                'NIK' => '987654321',
+            ],
+            [
+                'MR' => 'MR 3',
+                'NAMA' => 'Jane Smith',
+                'TTL' => '05-15-1995',
+                'NIK' => '123456789',
+            ],
             // Add more items as needed
         ];
 
