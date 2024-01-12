@@ -155,7 +155,7 @@ class PDFController extends Controller
             ],
             
             [
-                'MR' => 'MR 1',
+                'MR' => 'MR',
                 'NAMA' => 'NAdamsaf',
                 'TTL' => '23-33-1234',
                 'NIK' => '32352352352',
